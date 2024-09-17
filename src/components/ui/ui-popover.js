@@ -1,6 +1,5 @@
 import { cn } from "@/libraries/utilities";
-import { html, render } from "lit-html";
-import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
+import { html, render } from "uhtml";
 import tippy from "tippy.js/headless";
 
 /**
@@ -14,8 +13,7 @@ import tippy from "tippy.js/headless";
 class UIPopover extends HTMLElement {
   constructor() {
     super();
-    this.content = this.innerHTML;
-    this.innerHTML = "";
+    this.content = Array.from(this.childNodes);
   }
 
   connectedCallback() {
@@ -37,10 +35,10 @@ class UIPopover extends HTMLElement {
         const popper = document.createElement("div");
         const template = html`
           <div class=${cn("popover-content duration-150 border bg-white p-6 shadow-lg rounded-lg", className)}>
-            <div>${unsafeHTML(instance.props.content.toString())}</div>
+            <div>${instance.props.content}</div>
           </div>
         `;
-        render(template, popper);
+        render(popper, template);
         return { popper };
       },
       onShow(instance) {
@@ -74,7 +72,6 @@ class UIPopover extends HTMLElement {
           hide();
         }
       }
-
       return {
         onShow() {
           document.addEventListener("keydown", onKeyDown);

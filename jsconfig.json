@@ -3,9 +3,11 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": ["vinxi/types/client"],
     "esModuleInterop": true,
+    "isolatedModules": true,
     "checkJs": true,
+    "noEmit": true,
+    "types": ["vinxi/types/client"],
     "paths": {
       "@/*": ["./src/*"]
     }

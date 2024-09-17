@@ -19,7 +19,7 @@
 }
 .choices.is-disabled .choices__inner,
 .choices.is-disabled .choices__input {
-  background-color: #eaeaea;
+  background-color: #f3f4f6;
   cursor: not-allowed;
   -webkit-user-select: none;
   user-select: none;

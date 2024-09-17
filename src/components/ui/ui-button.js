@@ -1,4 +1,4 @@
-import { html, render } from "lit-html";
+import { html, render } from "uhtml";
 import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
 import { cn } from "@/libraries/utilities";
 
@@ -50,6 +50,7 @@ class UIButton extends HTMLElement {
     const isDisabled = this.hasAttribute("disabled");
 
     render(
+      this,
       html`
         <button
           class=${cn(
@@ -86,8 +87,7 @@ class UIButton extends HTMLElement {
         >
           ${unsafeHTML(this.content)}
         </button>
-      `,
-      this
+      `
     );
 
     // Mengatur atribut "type" dari tombol

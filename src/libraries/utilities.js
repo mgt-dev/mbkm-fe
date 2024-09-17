@@ -29,3 +29,8 @@ export const toast = new Notyf({
   },
   ripple: false,
 });
+
+export const toMonetary = (input) => {
+  if (!input) return "0";
+  return input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};

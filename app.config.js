@@ -29,7 +29,7 @@ class FileRouter extends BaseFileSystemRouter {
       return {
         $component: {
           src,
-          pick: ["default", "MetaTitle", "Script"],
+          pick: ["default", "Script", "MetaTitle", "MetaDescription"],
         },
         path,
       };
@@ -57,7 +57,7 @@ export default createApp({
       routes: (router, app) => {
         return new FileRouter(
           {
-            dir: resolve.absolute("./src/pages", router.root ?? ""),
+            dir: resolve.absolute("./src/routes", router.root ?? ""),
             extensions: ["js", "jsx", "ts", "tsx"],
           },
           router,

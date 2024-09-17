@@ -1,6 +1,5 @@
 import { cn } from "@/libraries/utilities"; // Pastikan fungsi ini tersedia
-import { html, render } from "lit-html"; // Menggunakan lit-html untuk rendering
-import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
+import { html, render } from "uhtml"; // Menggunakan lit-html untuk rendering
 
 /**
  * @element ui-card
@@ -57,6 +56,7 @@ class UICard extends HTMLElement {
     }
 
     render(
+      this,
       html`
         <div class="${variantClasses}">
           ${variant !== "no-image" && imageSrc
@@ -69,8 +69,7 @@ class UICard extends HTMLElement {
             <div>${unsafeHTML(this.content)}</div>
           </div>
         </div>
-      `,
-      this
+      `
     );
   }
 }

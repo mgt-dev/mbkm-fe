@@ -1,6 +1,5 @@
 import { cn } from "@/libraries/utilities";
-import { html, render } from "lit-html";
-import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
+import { html, render } from "uhtml";
 import MicroModal from "micromodal";
 
 /**
@@ -12,8 +11,7 @@ import MicroModal from "micromodal";
 class UIDialog extends HTMLElement {
   constructor() {
     super();
-    this.content = this.innerHTML;
-    this.innerHTML = "";
+    this.content = Array.from(this.childNodes);
   }
 
   connectedCallback() {
@@ -24,19 +22,12 @@ class UIDialog extends HTMLElement {
     const id = this.getAttribute("name") || Date.now().toString();
 
     render(
+      this,
       html`
-        <style>
-          .ui-dialog {
-            display: none;
-          }
-          .ui-dialog.is-open {
-            display: block;
-          }
-        </style>
         <div class="group ui-dialog" id=${id} aria-hidden="true">
           <div
             class=${cn(
-              "duration-300 fixed inset-0 bg-white/80 backdrop-blur-sm",
+              "z-10 duration-300 fixed inset-0 bg-white/80 backdrop-blur-sm",
               "group-aria-[hidden=false]:animate-in group-aria-[hidden=false]:fade-in-0",
               "group-aria-hidden:animate-out group-aria-hidden:fade-out-0"
             )}
@@ -45,7 +36,7 @@ class UIDialog extends HTMLElement {
           ></div>
           <div
             class=${cn(
-              "duration-300 fixed left-[50%] top-[50%] w-full h-full max-w-[95dvw] max-h-[90dvh] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-md border bg-white p-6 shadow-lg",
+              "z-10 duration-300 fixed left-[50%] top-[50%] w-full h-full max-w-[95dvw] max-h-[90dvh] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-md border bg-white p-6 shadow-lg",
               "group-aria-[hidden=false]:animate-in group-aria-[hidden=false]:fade-in-0 group-aria-[hidden=false]:zoom-in-95 group-aria-[hidden=false]:slide-in-from-left-1/2 group-aria-[hidden=false]:slide-in-from-top-[48%]",
               "group-aria-hidden:animate-out group-aria-hidden:fade-out-0 group-aria-hidden:zoom-out-95 group-aria-hidden:slide-out-to-left-1/2 group-aria-hidden:slide-out-to-top-[48%]",
               this.getAttribute("class")
@@ -53,11 +44,10 @@ class UIDialog extends HTMLElement {
             role="dialog"
             aria-modal="true"
           >
-            ${unsafeHTML(this.content)}
+            ${this.content}
           </div>
         </div>
-      `,
-      document.body
+      `
     );
 
     MicroModal.init({

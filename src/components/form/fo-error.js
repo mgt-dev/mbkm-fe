@@ -1,4 +1,4 @@
-import { html, render } from "lit-html";
+import { html, render } from "uhtml";
 import { cn } from "@/libraries/utilities";
 
 /**
@@ -30,10 +30,8 @@ class FormError extends HTMLElement {
 
   renderTemplate() {
     render(
-      html`
-        <p class=${cn("text-red-500 text-xs mt-1", this.getAttribute("class"), !this.getAttribute("error") && "hidden")}>${this.getAttribute("error")}</p>
-      `,
-      this
+      this,
+      html` <p class=${cn("text-red-500 text-xs mt-1", this.getAttribute("class"), !this.getAttribute("error") && "hidden")}>${this.getAttribute("error")}</p> `
     );
   }
 }

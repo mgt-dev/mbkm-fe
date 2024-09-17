@@ -2,20 +2,16 @@ import { html, render } from "uhtml";
 import { cn } from "@/libraries/utilities";
 
 /**
- * @element fo-input
+ * @element fo-textarea
  *
  * @attr {string} [name]
  * @attr {string} [value]
- * @attr {"text" | "password" | "number"} [type]
  * @attr {boolean} [error]
  * @attr {boolean} [disabled]
- * @attr {number} [min]
- * @attr {number} [max]
- * @attr {number} [step]
  * @attr {string} [placeholder]
  * @attr {string} [class]
  */
-class FormInput extends HTMLElement {
+class FormTextarea extends HTMLElement {
   constructor() {
     super();
     this.component = null;
@@ -23,7 +19,7 @@ class FormInput extends HTMLElement {
 
   connectedCallback() {
     this.renderTemplate();
-    this.component = this.querySelector("input");
+    this.component = this.querySelector("textarea");
     this.component.addEventListener("input", this.handleValueChanged);
   }
 
@@ -32,7 +28,7 @@ class FormInput extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["value", "type", "error", "disabled", "min", "max", "class"];
+    return ["value", "error", "disabled", "class"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -49,15 +45,11 @@ class FormInput extends HTMLElement {
     render(
       this,
       html`
-        <input
+        <textarea
           id=${this.getAttribute("name")}
           name=${this.getAttribute("name")}
-          value=${this.getAttribute("value")}
-          min=${this.getAttribute("min")}
-          max=${this.getAttribute("max")}
-          step=${this.getAttribute("step") ? Number(this.getAttribute("step")) : undefined}
           placeholder=${this.getAttribute("placeholder")}
-          .type=${this.getAttribute("type") ?? "text"}
+          ?value=${this.getAttribute("value")}
           ?disabled=${this.hasAttribute("disabled")}
           class=${cn(
             "outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400 block w-full p-2.5",
@@ -65,11 +57,10 @@ class FormInput extends HTMLElement {
             this.hasAttribute("error") && "border-red-500 text-red-900",
             this.getAttribute("class")
           )}
-          autocomplete=${!this.hasAttribute("type") || this.getAttribute("type") === "text" ? "on" : "off"}
-        />
+        ></textarea>
       `
     );
   }
 }
 
-customElements.define("fo-input", FormInput);
+customElements.define("fo-textarea", FormTextarea);
