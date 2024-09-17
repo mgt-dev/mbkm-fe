@@ -1,5 +1,4 @@
 import { html, render } from "uhtml";
-import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
 import { cn } from "@/libraries/utilities";
 
 /**
@@ -17,8 +16,7 @@ class UIButton extends HTMLElement {
   constructor() {
     super();
     this.component = null;
-    this.content = this.innerHTML;
-    this.innerHTML = "";
+    this.content = Array.from(this.childNodes);
   }
 
   connectedCallback() {
@@ -85,7 +83,7 @@ class UIButton extends HTMLElement {
           )}
           ?disabled=${isDisabled}
         >
-          ${unsafeHTML(this.content)}
+          ${this.content}
         </button>
       `
     );

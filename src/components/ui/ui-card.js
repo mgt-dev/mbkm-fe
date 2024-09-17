@@ -1,5 +1,5 @@
-import { cn } from "@/libraries/utilities"; // Pastikan fungsi ini tersedia
-import { html, render } from "uhtml"; // Menggunakan lit-html untuk rendering
+import { cn } from "@/libraries/utilities";
+import { html, render } from "uhtml";
 
 /**
  * @element ui-card
@@ -15,8 +15,7 @@ import { html, render } from "uhtml"; // Menggunakan lit-html untuk rendering
 class UICard extends HTMLElement {
   constructor() {
     super();
-    this.content = this.innerHTML;
-    this.innerHTML = "";
+    this.content = Array.from(this.childNodes);
   }
 
   connectedCallback() {
@@ -65,8 +64,8 @@ class UICard extends HTMLElement {
               </div>`
             : null}
           <div class="${contentClass}">
-            <h3 class="font-bold mb-2">${unsafeHTML(title)}</h3>
-            <div>${unsafeHTML(this.content)}</div>
+            <h3 class="font-bold mb-2">${title}</h3>
+            <div>${this.content}</div>
           </div>
         </div>
       `

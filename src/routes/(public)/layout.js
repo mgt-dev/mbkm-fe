@@ -2,7 +2,6 @@ import { redirect } from "@/libraries/client.router";
 import { $auth } from "@/stores/auth";
 import { html } from "uhtml";
 import headerLogo from "@/assets/images/ulbi_2.png";
-import banner from "@/assets/images/banner.png";
 import footerLogo from "@/assets/images/logo_ulbi_footer.png";
 import "iconify-icon";
 import "@/components/ui/ui-button.js";
@@ -32,7 +31,6 @@ export default async function Layout() {
           <ui-button color="orange" type="button" href="/login">Login</ui-button>
         </div>
       </div>
-      <div><img src="${banner}" height="${577}" alt="banner" /></div>
     </header>
     <div class="space-y-4 m-4">
       <div id="app-page"></div>

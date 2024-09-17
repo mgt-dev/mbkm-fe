@@ -1,5 +1,7 @@
 import { html } from "uhtml";
 import picture from "@/assets/images/pos_ind.png";
+import image from "@/assets/images/Frame 6.png";
+import banner from "@/assets/images/banner.png";
 import "@/components/ui/ui-card.js";
 
 export const MetaTitle = "Landing Page";
@@ -7,6 +9,7 @@ export const MetaDescription = "Description of this page";
 
 export default async function Page() {
   return html`
+    <div><img src="${banner}" height="${577}" alt="banner" /></div>
     <img src="${picture}" alt="logo" />
     <div>
       <h1 class="text-lg font-bold">${MetaTitle}</h1>
@@ -21,7 +24,7 @@ export default async function Page() {
             <div class="flex flex-col gap-2 text-gray-500">
               <div class="flex justify-between items-center">
                 <div>Diposting 2 Hari Yang Lalu</div>
-                <div><ui-badge content="New Badge" class="bg-green-400 text-white" dot>Aktif</ui-badge></div>
+                <div><ui-badge class="bg-green-400 text-white" dot>Aktif</ui-badge></div>
               </div>
               <div class="text-sm font-semibold">Global Finance Accounting Internship</div>
               <div class="flex justify-start items-center gap-2">

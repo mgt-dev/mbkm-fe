@@ -1,0 +1,6 @@
+.ui-dialog {
+  display: none;
+}
+.ui-dialog.is-open {
+  display: block;
+}

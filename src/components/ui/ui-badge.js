@@ -10,21 +10,10 @@ import { cn } from "@/libraries/utilities";
 class UIBadge extends HTMLElement {
   constructor() {
     super();
-    this.component = null;
-    this.content = this.getAttribute("content") || "";
-    this.innerHTML = "";
-  }
-
-  static get observedAttributes() {
-    return ["class", "content", "dot"];
+    this.content = Array.from(this.childNodes);
   }
 
   connectedCallback() {
-    this.renderTemplate();
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue === newValue) return;
     this.renderTemplate();
   }
 
