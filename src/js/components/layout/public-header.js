@@ -24,7 +24,7 @@ class PublicHeader extends HTMLElement {
           </div>
           <div class="h-[80px] w-full flex gap-6 justify-evenly items-center">
             <div class="flex gap-6 items-center">
-              <img width="${150}" src="src/images/ulbi_2.png" alt="logo" />
+              <img width="${150}" src="src/images/logo_ulbi_header.png" alt="logo" />
               <ui-link type="spa" href="/" class="text-gray-600 font-semibold hover:text-blue-400">Home</ui-link>
               <ui-link type="spa" href="/about" class="text-gray-600 font-semibold hover:text-blue-400">Tentang</ui-link>
             </div>
