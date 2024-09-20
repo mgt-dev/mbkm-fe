@@ -23,20 +23,20 @@ const fetchListLowongan = async () => {
               </div>
               <div class="text-sm font-semibold">${item.title}</div>
               <div class="flex justify-start items-center gap-2">
-                <iconify-icon icon="solar:buildings-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+                <iconify-icon icon="solar:buildings-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
                 <div>${item.company}</div>
               </div>
               <div class="flex justify-start items-center gap-2">
-                <iconify-icon icon="solar:map-point-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+                <iconify-icon icon="solar:map-point-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
                 <div>${item.location}</div>
               </div>
               <div class="flex justify-start items-center gap-2">
-                <iconify-icon icon="solar:calendar-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+                <iconify-icon icon="solar:calendar-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
                 <div>Batas Akhir Pendaftaran: ${item.date}</div>
               </div>
               <div class="flex justify-between items-center gap-2">
                 <div class="flex justify-start items-center gap-2">
-                  <iconify-icon icon="solar:user-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+                  <iconify-icon icon="solar:user-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
                   <div class="text-sm font-semibold">${item.applicants} Kandidat Mendaftar</div>
                 </div>
                 <div class="flex gap-2">
@@ -69,15 +69,15 @@ const fetchListLowongan = async () => {
           <div class="p-4 flex flex-col gap-1">
             <div class="text-xl font-semibold">Global Finance Accounting Internship</div>
             <div class="flex justify-start items-center gap-2">
-              <iconify-icon icon="solar:buildings-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+              <iconify-icon icon="solar:buildings-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
               <div>PT. Pos Indonesia</div>
             </div>
             <div class="flex justify-start items-center gap-2">
-              <iconify-icon icon="solar:map-point-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+              <iconify-icon icon="solar:map-point-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
               <div>Bandung, Jawa Barat</div>
             </div>
             <div class="flex justify-start items-center gap-2">
-              <iconify-icon icon="solar:calendar-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+              <iconify-icon icon="solar:calendar-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
               <div>Batas Akhir Pendaftaran: 6 September 2024</div>
             </div>
           </div>
@@ -152,7 +152,7 @@ const fetchArticle = async () => {
                   >Read more <iconify-icon icon="formkit:arrowright" height="15"></iconify-icon
                 ></ui-button>
                 <div class="flex items-center gap-2">
-                  <iconify-icon icon="solar:eye-bold" height="12"></iconify-icon>
+                  <iconify-icon icon="solar:eye-bold" height="12" noobserver></iconify-icon>
                   <span class="text-xs">Dilihat <span class="font-bold">${item.views}</span> kali</span>
                 </div>
               </div>

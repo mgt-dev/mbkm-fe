@@ -102,11 +102,11 @@ class UIPagination extends HTMLElement {
               <div class="flex items-center gap-1">
                 <ui-button size="icon" class="first-page flex items-center justify-center rounded text-white w-7 h-7 p-0" ?disabled=${page === 1 || disabled}>
                   <span class="sr-only">Go to first page</span>
-                  <iconify-icon icon="material-symbols:keyboard-double-arrow-left-rounded" width="20" height="20"></iconify-icon>
+                  <iconify-icon icon="material-symbols:keyboard-double-arrow-left-rounded" width="20" height="20" noobserver></iconify-icon>
                 </ui-button>
                 <ui-button size="icon" class="prev-page flex items-center justify-center rounded text-white w-7 h-7 p-0" ?disabled=${page === 1 || disabled}>
                   <span class="sr-only">Go to previous page</span>
-                  <iconify-icon icon="material-symbols:chevron-left-rounded" width="20" height="20"></iconify-icon>
+                  <iconify-icon icon="material-symbols:chevron-left-rounded" width="20" height="20" noobserver></iconify-icon>
                 </ui-button>
                 <ui-button
                   size="icon"
@@ -114,7 +114,7 @@ class UIPagination extends HTMLElement {
                   ?disabled=${count / limit === 0 || Math.ceil(count / limit) === (page ?? 1) || disabled}
                 >
                   <span class="sr-only">Go to next page</span>
-                  <iconify-icon icon="material-symbols:chevron-right-rounded" width="20" height="20"></iconify-icon>
+                  <iconify-icon icon="material-symbols:chevron-right-rounded" width="20" height="20" noobserver></iconify-icon>
                 </ui-button>
                 <ui-button
                   size="icon"
@@ -122,7 +122,7 @@ class UIPagination extends HTMLElement {
                   ?disabled=${count / limit === 0 || Math.ceil(count / limit) === (page ?? 1) || disabled}
                 >
                   <span class="sr-only">Go to last page</span>
-                  <iconify-icon icon="material-symbols:keyboard-double-arrow-right-rounded" width="20" height="20"></iconify-icon>
+                  <iconify-icon icon="material-symbols:keyboard-double-arrow-right-rounded" width="20" height="20" noobserver></iconify-icon>
                 </ui-button>
               </div>
             </div>

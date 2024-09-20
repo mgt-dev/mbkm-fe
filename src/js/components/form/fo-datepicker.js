@@ -86,7 +86,7 @@ class FormDatepicker extends HTMLElement {
               this.getAttribute("class")
             )}
           />
-          <iconify-icon icon="lucide:calendar" class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-600" height="16"></iconify-icon>
+          <iconify-icon icon="lucide:calendar" class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-600" height="16" noobserver></iconify-icon>
         </div>
       `
     );

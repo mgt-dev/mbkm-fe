@@ -38,7 +38,7 @@ export const getAndRender = async (page) => {
               <td class="capitalize">${item.name}</td>
               <td class="capitalize">${item.abilities.join(", ")}</td>
               <td class="text-center hover:animate-pulse">
-                <iconify-icon icon="mdi:pokeball" height="24" class="text-blue-600"></iconify-icon>
+                <iconify-icon icon="mdi:pokeball" height="24" class="text-blue-600" noobserver></iconify-icon>
               </td>
             </tr>
           `

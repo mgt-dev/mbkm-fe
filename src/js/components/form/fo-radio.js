@@ -55,7 +55,7 @@ class FormRadio extends HTMLElement {
             )}
           >
             ${this.hasAttribute("checked")
-              ? html` <iconify-icon icon="material-symbols:radio-button-unchecked" class="text-blue-500 " height="12"></iconify-icon> `
+              ? html` <iconify-icon icon="material-symbols:radio-button-unchecked" class="text-blue-500 " height="12" noobserver></iconify-icon> `
               : null}
           </div>
           ${this.hasAttribute("label") ? html`<div class="cursor-default text-sm font-medium text-gray-900">${this.getAttribute("label")}</div>` : null}

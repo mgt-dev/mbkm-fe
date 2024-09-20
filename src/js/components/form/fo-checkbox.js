@@ -53,7 +53,7 @@ class FormCheckbox extends HTMLElement {
               this.getAttribute("class")
             )}
           >
-            ${this.hasAttribute("checked") ? html` <iconify-icon icon="raphael:check" class="text-blue-500" height="16"></iconify-icon> ` : null}
+            ${this.hasAttribute("checked") ? html` <iconify-icon icon="raphael:check" class="text-blue-500" height="16" noobserver></iconify-icon> ` : null}
           </div>
           ${this.hasAttribute("label") ? html`<div class="cursor-default text-sm font-medium text-gray-900">${this.getAttribute("label")}</div>` : null}
         </div>
