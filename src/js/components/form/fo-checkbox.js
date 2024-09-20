@@ -5,12 +5,12 @@ import "./fo-label.js";
 /**
  * @element fo-checkbox
  *
- * @attr {string} [class]
  * @attr {string} [label]
  * @attr {string} [name]
  * @attr {string} [value]
  * @attr {boolean} [checked]
  * @ttr {boolean} [disabled]
+ * @attr {string} [className]
  */
 class FormCheckbox extends HTMLElement {
   constructor() {
@@ -24,7 +24,7 @@ class FormCheckbox extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["disabled", "checked", "class"];
+    return ["disabled", "checked"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -50,7 +50,7 @@ class FormCheckbox extends HTMLElement {
               "h-6 w-6 p-2.5 outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400",
               "flex items-center justify-center",
               this.hasAttribute("disabled") && "cursor-not-allowed bg-gray-200",
-              this.getAttribute("class")
+              this.getAttribute("className")
             )}
           >
             ${this.hasAttribute("checked") ? html` <iconify-icon icon="raphael:check" class="text-blue-500" height="16" noobserver></iconify-icon> ` : null}

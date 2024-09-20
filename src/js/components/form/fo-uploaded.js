@@ -8,7 +8,7 @@ import "../ui/ui-link.js";
  *
  * @attr {string} fileurl
  * @attr {string} [filename]
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class FormUploaded extends HTMLElement {
   constructor() {
@@ -27,7 +27,7 @@ class FormUploaded extends HTMLElement {
           class=${cn(
             "bg-white border border-gray-300 text-gray-900 rounded-lg focus:ring-gray-400 focus:border-gray-400",
             "w-full p-2.5 flex items-center justify-between gap-3 text-sm",
-            this.getAttribute("class")
+            this.getAttribute("className")
           )}
         >
           <ui-link type="external" href=${this.getAttribute("fileurl")} target="_blank" class="line-clamp-1">

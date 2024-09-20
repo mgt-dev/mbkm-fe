@@ -6,7 +6,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
  *
  * @attr {"button" | "submit"} [type] - Menentukan tipe tombol.
  * @attr {boolean} [disabled] - Menonaktifkan tombol jika diberikan.
- * @attr {string} [class] - Kelas tambahan untuk kustomisasi.
+ * @attr {string} [className] - Kelas tambahan untuk kustomisasi.
  * @attr {"default" | "outline_orange" | "outline_blue" | "ghost"} [variant] - Menentukan gaya varian tombol.
  * @attr {"default" | "red" | "orange" |"green" | "yellow" | "gray" | "muted"} [color] - Menentukan warna tombol.
  * @attr {"default" | "full" |"icon"} [size] - Menentukan ukuran tombol.
@@ -26,7 +26,7 @@ class UIButton extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["disabled", "class", "type", "variant", "color", "size"];
+    return ["disabled", "type", "variant", "color", "size", "className"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -83,7 +83,7 @@ class UIButton extends HTMLElement {
             },
             // Jika tombol dinonaktifkan
             "disabled:cursor-not-allowed disabled:bg-gray-500",
-            this.getAttribute("class") // Kelas tambahan dari atribut "class"
+            this.getAttribute("className") // Kelas tambahan dari atribut "className"
           )}
         >
           ${this.content}

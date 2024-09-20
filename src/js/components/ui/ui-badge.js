@@ -5,7 +5,7 @@ import { cn } from "../../libraries/tailwind.js";
  * @element ui-badge
  * @attr {boolean} [dot] - Menampilkan badge dengan dot jika diatur.
  * @attr {string} [content] - Isi teks dalam badge.
- * @attr {string} [class] - Kelas tambahan untuk kustomisasi.
+ * @attr {string} [className] - Kelas tambahan untuk kustomisasi.
  */
 class UIBadge extends HTMLElement {
   constructor() {
@@ -23,7 +23,7 @@ class UIBadge extends HTMLElement {
     render(
       this,
       html`
-        <div class=${cn("rounded-xl px-2 py-1 text-xs font-medium flex items-center gap-2 shrink-0 w-fit", this.getAttribute("class"))}>
+        <div class=${cn("rounded-xl px-2 py-1 text-xs font-medium flex items-center gap-2 shrink-0 w-fit", this.getAttribute("className"))}>
           ${hasDot ? html`<span class="w-2 h-2 rounded-full bg-current"></span>` : ""} ${this.content}
         </div>
       `

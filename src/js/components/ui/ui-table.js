@@ -4,7 +4,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
 /**
  * @element ui-table
  *
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class UITable extends HTMLElement {
   constructor() {
@@ -29,7 +29,7 @@ class UITable extends HTMLElement {
               "[&_tfoot]:border-t",
               "[&_th]:h-12 [&_th]:align-middle [&_th]:whitespace-nowrap [&_th]:font-semibold [&_th]:text-white [&_th]:bg-blue-700 [&_th]:text-sm [&_th]:px-4 [&_th]:py-2 [&_th]:capitalize",
               "[&_td]:whitespace-nowrap [&_td]:align-middle [&_td]:text-sm [&_td]:px-4 [&_td]:py-2",
-              this.getAttribute("class")
+              this.getAttribute("className")
             )}
           >
             ${this.content}

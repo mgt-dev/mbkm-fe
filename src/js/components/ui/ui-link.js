@@ -6,7 +6,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
  *
  * @attr {string} href
  * @attr {"_blank"} [target]
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class UILink extends HTMLElement {
   constructor() {
@@ -22,7 +22,11 @@ class UILink extends HTMLElement {
     render(
       this,
       html`
-        <a class=${cn("text-blue-600 hover:text-blue-400", this.getAttribute("class"))} href=${this.getAttribute("href")} target=${this.getAttribute("target")}>
+        <a
+          class=${cn("text-blue-600 hover:text-blue-400", this.getAttribute("className"))}
+          href=${this.getAttribute("href")}
+          target=${this.getAttribute("target")}
+        >
           ${this.content}
         </a>
       `

@@ -10,7 +10,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
  * @attr {string} [imageWidth=""]  // Menambahkan atribut untuk lebar gambar
  * @attr {string} [imageHeight=""] // Menambahkan atribut untuk tinggi gambar
  * @attr {string} [imageBgColor=""] // Menambahkan atribut untuk warna latar belakang container gambar
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class UICard extends HTMLElement {
   constructor() {
@@ -29,7 +29,7 @@ class UICard extends HTMLElement {
     const imageWidth = this.getAttribute("imageWidth") || "100%"; // Default lebar gambar 100%
     const imageHeight = this.getAttribute("imageHeight") || "auto";
     const imageBgColor = this.getAttribute("imageBgColor") || ""; // Warna latar belakang container gambar
-    const className = this.getAttribute("class") || "";
+    const className = this.getAttribute("className") || "";
 
     // Dynamic class based on the variant
     const variantClasses = cn("flex border border-gray-200 rounded-md overflow-hidden", className, {

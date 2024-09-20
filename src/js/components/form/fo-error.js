@@ -6,7 +6,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
  *
  * @attr {string} name
  * @attr {string} [error]
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class FormError extends HTMLElement {
   constructor() {
@@ -31,7 +31,9 @@ class FormError extends HTMLElement {
   renderTemplate() {
     render(
       this,
-      html` <p class=${cn("text-red-500 text-xs mt-1", this.getAttribute("class"), !this.getAttribute("error") && "hidden")}>${this.getAttribute("error")}</p> `
+      html`
+        <p class=${cn("text-red-500 text-xs mt-1", this.getAttribute("className"), !this.getAttribute("error") && "hidden")}>${this.getAttribute("error")}</p>
+      `
     );
   }
 }

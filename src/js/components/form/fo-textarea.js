@@ -9,7 +9,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
  * @attr {boolean} [error]
  * @attr {boolean} [disabled]
  * @attr {string} [placeholder]
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class FormTextarea extends HTMLElement {
   constructor() {
@@ -28,7 +28,7 @@ class FormTextarea extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["value", "error", "disabled", "class"];
+    return ["value", "error", "disabled"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -55,7 +55,7 @@ class FormTextarea extends HTMLElement {
             "outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400 block w-full p-2.5",
             this.hasAttribute("disabled") && "cursor-not-allowed bg-gray-100",
             this.hasAttribute("error") && "border-red-500 text-red-900",
-            this.getAttribute("class")
+            this.getAttribute("className")
           )}
         ></textarea>
       `

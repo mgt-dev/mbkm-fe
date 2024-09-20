@@ -12,7 +12,7 @@ import "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/+esm";
  * @attr {boolean} [disabled]
  * @attr {string} [placeholder]
  * @attr {string} [value]
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class FormDatepicker extends HTMLElement {
   constructor() {
@@ -83,7 +83,7 @@ class FormDatepicker extends HTMLElement {
             value=${this.getAttribute("value")}
             class=${cn(
               "outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400 block w-full p-2.5 pr-8",
-              this.getAttribute("class")
+              this.getAttribute("className")
             )}
           />
           <iconify-icon icon="lucide:calendar" class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-600" height="16" noobserver></iconify-icon>

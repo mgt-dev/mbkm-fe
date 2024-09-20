@@ -2,7 +2,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
 /**
  * @element ch-bar
  *
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class ChartBar extends HTMLElement {
   constructor() {

@@ -8,7 +8,7 @@ import tippyJS from "https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/headless/+esm";
  * @attr {string} name
  * @attr {"click" | "mouseenter"} [trigger]
  * @attr {"auto" | "auto-start" | "auto-end" | "top" | "top-start" | "top-end" | "bottom" | "bottom-start" | "bottom-end" | "right" | "right-start" | "right-end" | "left" | "left-start" | "left-end"} [placement]
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class UIPopover extends HTMLElement {
   constructor() {
@@ -21,7 +21,7 @@ class UIPopover extends HTMLElement {
   }
 
   renderTemplate() {
-    const className = this.getAttribute("class");
+    const className = this.getAttribute("className");
 
     // @ts-ignore
     tippyJS(document.querySelector(`[data-popover-trigger=${this.getAttribute("name")}]`), {

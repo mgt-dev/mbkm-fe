@@ -8,7 +8,7 @@ import "./ui-button.js";
  * @element ui-pagination
  *
  * @attr {boolean} [disabled]
- * @attr {string} [class]
+ * @attr {string} [className]
  * @attr {number} [data-pagination-count]
  * @attr {number} [data-pagination-limit]
  * @attr {number} [data-pagination-page]
@@ -44,7 +44,7 @@ class UIPagination extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["disabled", "class", "data-pagination-page"];
+    return ["disabled", "data-pagination-page"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -92,7 +92,7 @@ class UIPagination extends HTMLElement {
     render(
       this,
       html`
-        <div class=${cn("pagination-wrapper mx-0 flex items-center justify-between gap-2 text-sm text-muted-foreground", this.getAttribute("class"))}>
+        <div class=${cn("pagination-wrapper mx-0 flex items-center justify-between gap-2 text-sm text-muted-foreground", this.getAttribute("className"))}>
           <div class="truncate">Total: <strong>${toMonetary(count)}</strong> items</div>
           <div class="flex items-center gap-4">
             <div class="flex gap-4">

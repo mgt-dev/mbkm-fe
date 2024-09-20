@@ -1,3 +1,4 @@
+import { cn } from "../../libraries/tailwind.js";
 import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
 import editorJS from "https://cdn.jsdelivr.net/npm/@editorjs/editorjs@2.30.6/dist/editorjs.mjs";
 import nestedList from "https://cdn.jsdelivr.net/npm/@editorjs/nested-list@1.4.3/+esm";
@@ -5,7 +6,7 @@ import nestedList from "https://cdn.jsdelivr.net/npm/@editorjs/nested-list@1.4.3
 /**
  * @element fo-editor
  *
- * @attr {string} [class]
+ * @attr {string} [className]
  */
 class FormEditor extends HTMLElement {
   constructor() {
@@ -29,7 +30,13 @@ class FormEditor extends HTMLElement {
   }
 
   renderTemplate() {
-    render(this, html`<div id="editorjs" class="bg-gray-50 min-h-[400px] border border-gray-300 text-gray-900 text-sm overflow-hidden rounded p-2.5"></div>`);
+    render(
+      this,
+      html`<div
+        id="editorjs"
+        class=${cn("bg-gray-50 min-h-[400px] border border-gray-300 text-gray-900 text-sm overflow-hidden rounded p-2.5", this.getAttribute("className"))}
+      ></div>`
+    );
 
     this.component = this.querySelector("#editorjs");
     if (this.component instanceof HTMLElement) {
