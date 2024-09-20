@@ -148,9 +148,9 @@ const fetchArticle = async () => {
               <div class="text-xl text-blue-800 font-bold">${item.title}</div>
               <div class="text-md">${item.content}</div>
               <div class="flex justify-between items-center">
-                <ui-button color="orange" type="button" href="" className="text-xs font-medium"
-                  >Read more <iconify-icon icon="formkit:arrowright" height="15"></iconify-icon
-                ></ui-button>
+                <ui-button color="orange" type="button" href="" className="text-xs font-medium">
+                  Read more <iconify-icon icon="formkit:arrowright" height="15" noobserver></iconify-icon>
+                </ui-button>
                 <div class="flex items-center gap-2">
                   <iconify-icon icon="solar:eye-bold" height="12" noobserver></iconify-icon>
                   <span class="text-xs">Dilihat <span class="font-bold">${item.views}</span> kali</span>
