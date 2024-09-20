@@ -88,7 +88,7 @@ const fetchListLowongan = async () => {
           </div>
           <div class="space-y-3 m-3">
             <div>
-              <fo-label label="Deskripsi Pekerjaan"></fo-label>
+              <fo-label label="Deskripsi Pekerjaan" class="text-sm text-gray-800"></fo-label>
               <p class="mx-4">
                 As a Global Finance & Accounting Intern at EIGER, your mission is to support our finance and accounting team in various functions, including
                 financial analysis, reporting, and compliance. You will gain practical experience in managing financial data, contributing to budgeting
@@ -103,19 +103,19 @@ const fetchListLowongan = async () => {
               </p>
             </div>
             <div>
-              <fo-label label="Durasi"></fo-label>
+              <fo-label label="Durasi" class="text-sm text-gray-800"></fo-label>
               <p class="mx-4">3 bulan</p>
             </div>
             <div>
-              <fo-label label="Jenis Pekerjaan"></fo-label>
+              <fo-label label="Jenis Pekerjaan" class="text-sm text-gray-800"></fo-label>
               <p class="mx-4">Fulltime</p>
             </div>
             <div>
-              <fo-label label="Benefit Yang Ditawarkan"></fo-label>
+              <fo-label label="Benefit Yang Ditawarkan" class="text-sm text-gray-800"></fo-label>
               <p class="mx-4">Gaji pokok per bulan, tunjangan kesehatan</p>
             </div>
             <div>
-              <fo-label label="Tipe Lowongan"></fo-label>
+              <fo-label label="Tipe Lowongan" class="text-sm text-gray-800"></fo-label>
               <p class="mx-4">Umum</p>
             </div>
           </div>

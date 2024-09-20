@@ -25,7 +25,7 @@ class FormUploaded extends HTMLElement {
       html`
         <div
           class=${cn(
-            "bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-gray-400 focus:border-gray-400",
+            "bg-white border border-gray-300 text-gray-900 rounded-lg focus:ring-gray-400 focus:border-gray-400",
             "w-full p-2.5 flex items-center justify-between gap-3 text-sm",
             this.getAttribute("class")
           )}

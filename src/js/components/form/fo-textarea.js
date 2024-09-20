@@ -52,7 +52,7 @@ class FormTextarea extends HTMLElement {
           ?value=${this.getAttribute("value")}
           ?disabled=${this.hasAttribute("disabled")}
           class=${cn(
-            "outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400 block w-full p-2.5",
+            "outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400 block w-full p-2.5",
             this.hasAttribute("disabled") && "cursor-not-allowed bg-gray-100",
             this.hasAttribute("error") && "border-red-500 text-red-900",
             this.getAttribute("class")

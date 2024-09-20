@@ -82,7 +82,7 @@ class FormDatepicker extends HTMLElement {
             ?disabled=${this.hasAttribute("disabled")}
             value=${this.getAttribute("value")}
             class=${cn(
-              "outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400 block w-full p-2.5 pr-8",
+              "outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400 block w-full p-2.5 pr-8",
               this.getAttribute("class")
             )}
           />

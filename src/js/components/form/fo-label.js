@@ -28,7 +28,7 @@ class FormLabel extends HTMLElement {
         `
       );
     } else {
-      render(this, html` <div class=${cn("block mb-1 text-sm font-medium text-gray-900", this.getAttribute("class"))}>${this.getAttribute("label")}</div> `);
+      render(this, html` <div class=${cn("block mb-1 text-xs font-medium text-gray-600", this.getAttribute("class"))}>${this.getAttribute("label")}</div> `);
     }
   }
 }
