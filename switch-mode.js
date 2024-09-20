@@ -11,7 +11,7 @@ async function modifyBaseHref(isProduction) {
     filesArray.forEach((file) => {
       try {
         const content = readFileSync(file, "utf-8");
-        const newBaseHref = isProduction ? '<base href="https://bakazero.github.io/try-github-pages/" />' : '<base href="/" />';
+        const newBaseHref = isProduction ? '<base href="https://mgt-dev.github.io/mbkm-fe/" />' : '<base href="/" />';
         const updatedContent = content.replace(/<base href=".*?" \/>/, newBaseHref);
         writeFileSync(file, updatedContent, "utf-8");
       } catch (err) {
@@ -27,7 +27,7 @@ async function updateBaseUrl(isProduction) {
   try {
     const settingsPath = "./src/js/customs/settings.js";
     const content = readFileSync(settingsPath, "utf-8");
-    const newBaseUrl = isProduction ? "https://bakazero.github.io/try-github-pages/" : "/";
+    const newBaseUrl = isProduction ? "https://mgt-dev.github.io/mbkm-fe/" : "/";
     const updatedContent = content.replace(/export const baseUrl = ".*?";/, `export const baseUrl = "${newBaseUrl}";`);
     writeFileSync(settingsPath, updatedContent, "utf-8");
   } catch (err) {
