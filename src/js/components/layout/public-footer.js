@@ -24,7 +24,7 @@ class PublicFooter extends HTMLElement {
                 perguruan tinggi vokasi yang unggul secara Nasional dalam bidang Logistik dan Manajemen Rantai Pasok
               </p>
               <div class="flex flex-row gap-2">
-                <iconify-icon icon="ic:baseline-facebook" height="22" noobserver noobserver></iconify-icon>
+                <iconify-icon icon="ic:baseline-facebook" height="22" noobserver></iconify-icon>
                 <iconify-icon icon="mdi:twitter" height="22" noobserver></iconify-icon>
                 <iconify-icon icon="mdi:youtube" height="22" noobserver></iconify-icon>
                 <iconify-icon icon="mdi:instagram" height="22" noobserver></iconify-icon>
