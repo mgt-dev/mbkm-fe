@@ -24,14 +24,32 @@ if (bgContainer) {
   bgContainer.style.backgroundImage = `url('${bgulbi}')`;
 }
 
-const searchComponent = document.querySelector("ui-search");
+// const searchComponent = document.querySelector("ui-search");
 
-if (searchComponent) {
-  searchComponent.addEventListener("search", (event) => {
-    const customEvent = /** @type {CustomEvent} */ (event); // Casting event to CustomEvent
-    const keyword = customEvent.detail.keyword;
-    console.log(`Searching for: ${keyword}`);
+// if (searchComponent) {
+//   searchComponent.addEventListener("search", (event) => {
+//     const customEvent = /** @type {CustomEvent} */ (event); // Casting event to CustomEvent
+//     const keyword = customEvent.detail.keyword;
+//     console.log(`Searching for: ${keyword}`);
 
-    // Logika pencarian dapat ditambahkan di sini
+//     // Logika pencarian dapat ditambahkan di sini
+//   });
+// }
+
+const form = document.querySelector("#search-form");
+if (form instanceof HTMLFormElement) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const keyword = formData.get("keyword");
+    // if (keyword) {
+    //   document.dispatchEvent(
+    //     new CustomEvent("search", {
+    //       detail: { keyword },
+    //       bubbles: true,
+    //       composed: true,
+    //     })
+    //   );
+    // }
   });
 }

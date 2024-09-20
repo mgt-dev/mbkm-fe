@@ -1,38 +1,44 @@
-export const lowonganMagang = [
-  {
-    id: 1,
-    picture: "image1",
-    title: "Global Finance Accounting Internship",
-    company: "PT. Pos Indonesia",
-    location: "Bandung, Jawa Barat",
-    date: "6 September 2024",
-    applicants: "10",
-    status: "Aktif",
-    bgColor: "ulbiBlue",
-  },
-  {
-    id: 2,
-    picture: "image2",
-    title: "Affiliate Marketing Strategist and Reseller Coordinator",
-    company: "PT. Pos Indonesia",
-    location: "Bandung, Jawa Barat",
-    date: "6 September 2024",
-    applicants: "10",
-    status: "Aktif",
-    bgColor: "white",
-  },
-  {
-    id: 3,
-    picture: "image3",
-    title: "Accounting Staff Intern",
-    company: "PT. Pos Indonesia",
-    location: "Bandung, Jawa Barat",
-    date: "6 September 2024",
-    applicants: "10",
-    status: "Aktif",
-    bgColor: "white",
-  },
-];
+import { timeout } from "./src/js/libraries/utilities.js";
+
+export const lowonganMagang = async () => {
+  await timeout(300);
+
+  return [
+    {
+      id: 1,
+      picture: "image1",
+      title: "Global Finance Accounting Internship",
+      company: "PT. Pos Indonesia",
+      location: "Bandung, Jawa Barat",
+      date: "6 September 2024",
+      applicants: "10",
+      status: "Aktif",
+      bgColor: "ulbiBlue",
+    },
+    {
+      id: 2,
+      picture: "image2",
+      title: "Affiliate Marketing Strategist and Reseller Coordinator",
+      company: "PT. Pos Indonesia",
+      location: "Bandung, Jawa Barat",
+      date: "6 September 2024",
+      applicants: "10",
+      status: "Aktif",
+      bgColor: "white",
+    },
+    {
+      id: 3,
+      picture: "image3",
+      title: "Accounting Staff Intern",
+      company: "PT. Pos Indonesia",
+      location: "Bandung, Jawa Barat",
+      date: "6 September 2024",
+      applicants: "10",
+      status: "Aktif",
+      bgColor: "white",
+    },
+  ];
+};
 
 export const artikel = [
   {

@@ -15,10 +15,10 @@ class PublicFooter extends HTMLElement {
     render(
       this,
       html`
-        <footer>
-          <div class="h-[455px] w-full flex gap-10 justify-center items-center bg-ulbiBlack text-white text-xs">
-            <div class="w-96 flex flex-col gap-4">
-              <img src="src/images/logo_ulbi_footer.png" width="${150}" alt="logo" />
+        <footer class="bg-ulbiBlack text-white text-xs">
+          <div class="grid grid-cols-3 gap-10 mx-auto max-w-[90dvw] 2xl:max-w-7xl py-12">
+            <div class="space-y-4 self-center">
+              <img src="src/images/logo_ulbi_footer.png" alt="logo" />
               <p>
                 ULBI adalah institusi pendidikan tinggi yang didirikan oleh Yayasan Pendidikan Bhakti Pos Indonesia (YPBPI), ULBI memiliki visi menjadi
                 perguruan tinggi vokasi yang unggul secara Nasional dalam bidang Logistik dan Manajemen Rantai Pasok
@@ -31,7 +31,7 @@ class PublicFooter extends HTMLElement {
                 <iconify-icon icon="ic:baseline-tiktok" height="22"></iconify-icon>
               </div>
             </div>
-            <div class="flex flex-col gap-2 align-items: start">
+            <div class="flex flex-col gap-2">
               <span class="text-lg font-semibold">Lokasi</span>
               <span>Yayasan Pendidikan Bhakti Pos Indonesia (YPBPI)</span>
               <span>Jalan Sariasih No. 54 Sarijadi Bandung, 40151, Jawa Barat Indonesia</span>
@@ -43,7 +43,7 @@ class PublicFooter extends HTMLElement {
               <span><iconify-icon icon="formkit:arrowright" height="10"></iconify-icon> info@ulbi.ac.id</span>
               <span><iconify-icon icon="formkit:arrowright" height="10"></iconify-icon> humas@ulbi.ac.id</span>
             </div>
-            <div class="flex flex-col gap-2 align-items: start">
+            <div class="flex flex-col gap-2">
               <span class="text-lg font-semibold">Link Terkait</span>
               <span><iconify-icon icon="formkit:arrowright" height="10"></iconify-icon> Penerimaan Mahasiswa Baru (Admission)</span>
               <span><iconify-icon icon="formkit:arrowright" height="10"></iconify-icon> Sistem Informasi Akademik (SIP)</span>

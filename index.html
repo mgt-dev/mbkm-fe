@@ -15,71 +15,78 @@
   <body>
     <public-header></public-header>
     <!-- Content  -->
-    <div class="mx-16 my-8 flex flex-col gap-8 text-gray-500">
-      <div><img src="src/images/banner.png" height="${577}" alt="banner" /></div>
-      <div class="text-3xl text-center font-bold text-black">Lowongan Magang</div>
-      <div>
-        <div class="p-4 flex flex-col gap-3 bg-gray-300/10 text-xs rounded-md border border-gray-300">
-          <div class="font-semibold">Cari Berdasarkan Perusahaan, Pekerjaan dan Program Studi</div>
-          <div><ui-search placeholder="Silahkan ketik pencarian Anda disini" buttonText="Cari"></ui-search></div>
-          <div class="flex gap-3 justify-center items-center">
-            <div class="font-semibold">Tampilkan filter</div>
-            <div><iconify-icon icon="solar:alt-arrow-down-outline" width="22" class="text-gray-500"></div>
-          </div>
+    <div class="mx-auto max-w-[90dvw] rounded overflow-hidden">
+      <img src="src/images/banner.png" alt="banner" />
+    </div>
+    <div class="mx-auto max-w-[90dvw] 2xl:max-w-7xl my-8 flex flex-col gap-8 text-gray-500">
+      <h2 class="text-3xl text-center font-bold text-black">Lowongan Magang</h2>
+
+      <form id="search-form" class="p-4 flex flex-col gap-3 bg-gray-300/10 rounded-md border border-gray-300">
+        <fo-label class="mt-1" for="keyword" label="Cari Berdasarkan Perusahaan, Pekerjaan dan Program Studi"></fo-label>
+        <div class="relative -mt-3">
+          <fo-input name="keyword" class="py-4" placeholder="Silahkan ketik pencarian Anda disini..."></fo-input>
+          <button type="submit" class="bg-orange-500 text-sm font-bold text-white px-4 py-2 rounded-md absolute top-1/2 right-2 transform -translate-y-1/2">
+            Cari
+          </button>
         </div>
-      </div>
-      <div class="text-sm font-semibold">Total: ${lowonganMagang.length} Lowongan Magang</div>
-      <div class="h-[500px] grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="flex flex-col gap-3 overflow-y-auto">
-          ${lowonganMagang.map(
-            (item) => html`
-              <div>
-                <div class="flex flex-row gap-3 rounded-lg border border-gray-300">
-                  <div class="w-[120px] flex overflow-hidden rounded-l-lg">
-                    <img class="object-center object-contain" src=${imageMap[item.picture]} height="[100px]" alt="image" />
-                  </div>
-                  <div class="p-4 flex flex-col gap-2 text-xs">
-                    <div class="flex justify-between items-center">
-                      <div>Diposting 2 Hari Yang Lalu</div>
-                      <div><ui-badge class="bg-green-600/25 text-green-600" dot>${item.status}</ui-badge></div>
-                    </div>
-                    <div class="text-sm font-semibold">${item.title}</div>
-                    <div class="flex justify-start items-center gap-2">
-                      <iconify-icon icon="solar:buildings-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
-                      <div>${item.company}</div>
-                    </div>
-                    <div class="flex justify-start items-center gap-2">
-                      <iconify-icon icon="solar:map-point-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
-                      <div>${item.location}</div>
-                    </div>
-                    <div class="flex justify-start items-center gap-2">
-                      <iconify-icon icon="solar:calendar-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
-                      <div>Batas Akhir Pendaftaran: ${item.date}</div>
-                    </div>
-                    <div class="flex justify-between items-center gap-2">
-                      <div class="flex justify-start items-center gap-2">
-                        <iconify-icon icon="solar:user-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
-                        <div class="text-sm font-semibold">${item.applicants} Kandidat Mendaftar</div>
-                      </div>
-                      <div class="flex gap-2">
-                        <ui-button variant="outline_orange" type="button" href="">Simpan</ui-button>
-                        <ui-button color="orange" type="button" href="">Detail</ui-button>
-                      </div>
-                    </div>
-                  </div>
+        <div class="flex gap-1 justify-center items-center mt-1">
+          <div class="font-semibold text-xs">Tampilkan filter</div>
+          <iconify-icon icon="solar:alt-arrow-down-outline" class="text-gray-500" height="16"></iconify-icon>
+        </div>
+      </form>
+
+      <div class="text-sm font-semibold">Total 0 Lowongan Magang</div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div id="listLowonganMagang" class="flex flex-col gap-4 max-h-[500px] overflow-y-auto w-full pr-3">
+          <div class="flex-none w-full h-[200px] bg-gray-300 rounded animate-pulse"></div>
+          <div class="flex-none w-full h-[200px] bg-gray-300 rounded animate-pulse"></div>
+          <div class="flex-none w-full h-[200px] bg-gray-300 rounded animate-pulse"></div>
+          <!-- <div class="flex-none flex gap-3 rounded-lg border border-gray-300">
+            <div class="w-[120px] flex overflow-hidden rounded-l-lg">
+              <img class="object-center object-contain" src="${imageMap[item.picture]}" height="[100px]" alt="image" />
+            </div>
+            <div class="p-4 flex flex-col gap-2 text-xs">
+              <div class="flex justify-between items-center">
+                <div>Diposting 2 Hari Yang Lalu</div>
+                <div><ui-badge class="bg-green-600/25 text-green-600" dot>${item.status}</ui-badge></div>
+              </div>
+              <div class="text-sm font-semibold">${item.title}</div>
+              <div class="flex justify-start items-center gap-2">
+                <iconify-icon icon="solar:buildings-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+                <div>${item.company}</div>
+              </div>
+              <div class="flex justify-start items-center gap-2">
+                <iconify-icon icon="solar:map-point-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+                <div>${item.location}</div>
+              </div>
+              <div class="flex justify-start items-center gap-2">
+                <iconify-icon icon="solar:calendar-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+                <div>Batas Akhir Pendaftaran: ${item.date}</div>
+              </div>
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex justify-start items-center gap-2">
+                  <iconify-icon icon="solar:user-bold-duotone" height="22" class="text-ulbiOrange"></iconify-icon>
+                  <div class="text-sm font-semibold">${item.applicants} Kandidat Mendaftar</div>
+                </div>
+                <div class="flex gap-2">
+                  <ui-button variant="outline_orange" type="button" href="">Simpan</ui-button>
+                  <ui-button color="orange" type="button" href="">Detail</ui-button>
                 </div>
               </div>
-            `
-          )}
+            </div>
+          </div> -->
         </div>
-        <div class="flex flex-col rounded-md border border-gray-300 text-xs">
+        <div id="detailLowonganMagang">
+          <div class="flex-none w-full h-[500px] bg-gray-300 rounded animate-pulse"></div>
+        </div>
+        <!-- <div class="flex flex-col rounded-md border border-gray-300 text-xs">
           <div class="pt-4 px-4 flex justify-between items-center">
             <div>Diposting 2 Hari Yang Lalu</div>
             <div><ui-badge class="bg-green-600/25 text-green-600" dot>Aktif</ui-badge></div>
           </div>
-          <div class="flex flex-row border-b border-gray-300">
+          <div class="flex border-b border-gray-300">
             <div class="pl-2 w-[120px] flex overflow-hidden rounded-l-lg">
-              <img class="object-center object-contain" src=${image1} height="[100px]" alt="image" />
+              <img class="object-center object-contain" src="${image1}" height="[100px]" alt="image" />
             </div>
             <div class="p-4 flex flex-col gap-1">
               <div class="text-xl font-semibold">Global Finance Accounting Internship</div>
@@ -97,53 +104,59 @@
               </div>
             </div>
           </div>
-          <div class="pt-2 flex border-b border-gray-300"><img class="object-center object-contain" src=${image6} height="[100px]" alt="image" /></div>
+          <div class="pt-2 flex border-b border-gray-300"><img class="object-center object-contain" src="${image6}" height="[100px]" alt="image" /></div>
           <div class="p-4 flex flex-wrap justify-between">
             <div><ui-button variant="outline_orange" type="button" href="">Simpan</ui-button></div>
             <div><ui-button color="orange" type="button" href="">Daftar</ui-button></div>
           </div>
-        </div>
+        </div> -->
       </div>
+
       <div class="mt-16 p-4 rounded-md border border-gray-300">
-        <div id="background-container" class="flex flex-col gap-3  bg-no-repeat bg-left-top bg-cover relative">
+        <div id="background-container" class="flex flex-col gap-3 bg-no-repeat bg-left-top bg-cover relative">
           <div class="text-xl text-black font-bold">Would You Want To Join Us</div>
           <div class="text-xs">
             Posting lowongan Anda langsung dari halaman member. Setiap saat dan kapan saja Anda membutuhkan talenta terbaik tinggal mengisi form yang telah kami
             sediakan secara online. Mudah dan cepat.
           </div>
-          <div class="flex flex-warp justify-evenly items-center">
-            <div><ui-button variant="outline_blue">REGISTER JOB SEEKER</ui-button></div>
-            <div><ui-button variant="outline_blue">REGISTER EMPLOYER</ui-button></div>
-            <div><ui-button variant="default">LOGIN</ui-button></div>
+          <div class="grid grid-cols-3 items-center gap-x-4">
+            <ui-button class="w-full" variant="outline_blue">REGISTER JOB SEEKER</ui-button>
+            <ui-button class="w-full" variant="outline_blue">REGISTER EMPLOYER</ui-button>
+            <ui-button class="w-full" variant="default">LOGIN</ui-button>
           </div>
         </div>
       </div>
+
       <div class="flex justify-center text-3xl text-black font-bold">Artikel</div>
-      <div class="flex flex-row gap-4 overflow-x-auto">
-        ${artikel.map(
-          (item) => html`
-            <div class="w-[450px] flex flex-col gap-2 border border-gray-300 rounded-lg">
-              <div><img class="rounded-t-lg overflow-hidden w-[450px]" src="${imageMap[item.picture]}" alt="post" /></div>
-              <div class="p-4 flex flex-col gap-3">
-                <div class="text-xs">Dipublikasikan oleh <span class="font-bold">${item.author} | 6 September 2024 </span></div>
-                <div class="text-xl text-blue-800 font-bold">${item.title}</div>
-                <div class="text-md">${item.content}</div>
-                <div class="flex justify-between items-center">
-                  <ui-button color="orange" type="button" href="" class="text-xs font-medium"
-                    >Read more <iconify-icon icon="formkit:arrowright" height="15"></iconify-icon
-                  ></ui-button>
-                  <div class="flex items-center gap-2">
-                    <iconify-icon icon="solar:eye-bold" height="12"></iconify-icon>
-                    <span class="text-xs">Dilihat <span class="font-bold">${item.views}</span> kali</span>
-                  </div>
-                </div>
+      <div class="flex gap-4 overflow-x-auto">
+        <div class="flex-none w-[414px] h-[300px] bg-gray-300 rounded animate-pulse"></div>
+        <div class="flex-none w-[414px] h-[300px] bg-gray-300 rounded animate-pulse"></div>
+        <div class="flex-none w-[414px] h-[300px] bg-gray-300 rounded animate-pulse"></div>
+      </div>
+
+      <!-- <div class="flex gap-4 overflow-x-auto">
+        ${artikel.map( (item) => html`
+        <div class="w-[450px] flex flex-col gap-2 border border-gray-300 rounded-lg">
+          <div><img class="rounded-t-lg overflow-hidden w-[450px]" src="${imageMap[item.picture]}" alt="post" /></div>
+          <div class="p-4 flex flex-col gap-3">
+            <div class="text-xs">Dipublikasikan oleh <span class="font-bold">${item.author} | 6 September 2024 </span></div>
+            <div class="text-xl text-blue-800 font-bold">${item.title}</div>
+            <div class="text-md">${item.content}</div>
+            <div class="flex justify-between items-center">
+              <ui-button color="orange" type="button" href="" class="text-xs font-medium"
+                >Read more <iconify-icon icon="formkit:arrowright" height="15"></iconify-icon
+              ></ui-button>
+              <div class="flex items-center gap-2">
+                <iconify-icon icon="solar:eye-bold" height="12"></iconify-icon>
+                <span class="text-xs">Dilihat <span class="font-bold">${item.views}</span> kali</span>
               </div>
             </div>
-          `
-        )}
-      </div>
+          </div>
+        </div>
+        ` )}
+      </div> -->
     </div>
-      <!-- End of content  -->
+    <!-- End of content  -->
     <public-footer></public-footer>
   </body>
 </html>

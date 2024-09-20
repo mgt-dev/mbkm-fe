@@ -22,7 +22,7 @@ class FormLabel extends HTMLElement {
       render(
         this,
         html`
-          <label for=${this.getAttribute("for")} class=${cn("block mb-1 text-sm font-medium text-gray-900", this.getAttribute("class"))}>
+          <label for=${this.getAttribute("for")} class=${cn("block mb-1 text-xs font-medium text-gray-600", this.getAttribute("class"))}>
             ${this.getAttribute("label")}
           </label>
         `
