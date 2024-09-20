@@ -7,9 +7,9 @@ import { cn } from "@/libraries/utilities";
  * @attr {"button" | "submit"} [type] - Menentukan tipe tombol.
  * @attr {boolean} [disabled] - Menonaktifkan tombol jika diberikan.
  * @attr {string} [class] - Kelas tambahan untuk kustomisasi.
- * @attr {"default" | "outline" | "ghost"} [variant] - Menentukan gaya varian tombol.
+ * @attr {"default" | "outline_orange" | "outline_blue" | "ghost"} [variant] - Menentukan gaya varian tombol.
  * @attr {"default" | "red" | "orange" |"green" | "yellow" | "gray" | "muted"} [color] - Menentukan warna tombol.
- * @attr {"default" | "icon"} [size] - Menentukan ukuran tombol.
+ * @attr {"default" | "full" |"icon"} [size] - Menentukan ukuran tombol.
  * @attr {string} [href] - URL yang dituju saat tombol diklik.
  */
 class UIButton extends HTMLElement {
@@ -56,10 +56,12 @@ class UIButton extends HTMLElement {
             "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-600 disabled:pointer-events-none disabled:opacity-50",
             {
               // Variasi varian
-              "border border-blue-700/80 hover:border-blue-600/60 focus-visible:ring-blue-600/80 hover:bg-blue-600 text-white bg-blue-700":
+              "border border-blue-700/80 hover:border-blue-600/60 focus-visible:ring-blue-600/80 hover:bg-blue-600 text-white bg-blue-800":
                 variant === "default",
               "border border-orange-600/60 hover:border-orange-400 focus-visible:ring-orange-400 bg-white text-orange-600 hover:text-orange-800":
-                variant === "outline",
+                variant === "outline_orange",
+              "border border-blue-800/60 hover:border-blue-800 focus-visible:ring-blue-800 bg-white text-blue-800 hover:text-blue-800":
+                variant === "outline_blue",
               "text-blue-600 hover:text-blue-800 focus-visible:ring-white/20": variant === "ghost",
             },
             {
@@ -75,6 +77,7 @@ class UIButton extends HTMLElement {
             {
               // Variasi ukuran
               "px-8 py-2 text-sm": size === "default",
+              "px-[100%] py-2 text-sm": size === "full",
               "h-9 w-9": size === "icon",
             },
             // Jika tombol dinonaktifkan

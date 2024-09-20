@@ -51,7 +51,7 @@ export default async function Layout() {
             <iconify-icon icon="ic:baseline-tiktok" height="22"></iconify-icon>
           </div>
         </div>
-        <div class="flex flex-col gap-2 justify-start items-start">
+        <div class="flex flex-col gap-2 align-items: start">
           <span class="text-lg font-semibold">Lokasi</span>
           <span>Yayasan Pendidikan Bhakti Pos Indonesia (YPBPI)</span>
           <span>Jalan Sariasih No. 54 Sarijadi Bandung, 40151, Jawa Barat Indonesia</span>
@@ -63,7 +63,7 @@ export default async function Layout() {
           <span><iconify-icon icon="formkit:arrowright" height="10"></iconify-icon> info@ulbi.ac.id</span>
           <span><iconify-icon icon="formkit:arrowright" height="10"></iconify-icon> humas@ulbi.ac.id</span>
         </div>
-        <div class="flex flex-col gap-2 justify-start items-start">
+        <div class="flex flex-col gap-2 align-items: start">
           <span class="text-lg font-semibold">Link Terkait</span>
           <span><iconify-icon icon="formkit:arrowright" height="10"></iconify-icon> Penerimaan Mahasiswa Baru (Admission)</span>
           <span><iconify-icon icon="formkit:arrowright" height="10"></iconify-icon> Sistem Informasi Akademik (SIP)</span>
