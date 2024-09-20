@@ -19,7 +19,7 @@ const fetchListLowongan = async () => {
             <div class="p-4 flex flex-col gap-2 text-xs">
               <div class="flex justify-between items-center">
                 <div>Diposting 2 Hari Yang Lalu</div>
-                <div><ui-badge class="bg-green-600/25 text-green-600" dot>${item.status}</ui-badge></div>
+                <div><ui-badge className="bg-green-600/25 text-green-600" dot>${item.status}</ui-badge></div>
               </div>
               <div class="text-sm font-semibold">${item.title}</div>
               <div class="flex justify-start items-center gap-2">
@@ -60,7 +60,7 @@ const fetchListLowongan = async () => {
       <div class="flex-none h-[500px] flex flex-col rounded-md border border-gray-300 text-xs">
         <div class="pt-4 px-4 flex justify-between items-center">
           <div>Diposting 2 Hari Yang Lalu</div>
-          <div><ui-badge class="bg-green-600/25 text-green-600" dot>Aktif</ui-badge></div>
+          <div><ui-badge className="bg-green-600/25 text-green-600" dot>Aktif</ui-badge></div>
         </div>
         <div class="flex border-b border-gray-300">
           <div class="pl-2 w-[120px] flex overflow-hidden rounded-l-lg">
@@ -88,7 +88,7 @@ const fetchListLowongan = async () => {
           </div>
           <div class="space-y-3 m-3">
             <div>
-              <fo-label label="Deskripsi Pekerjaan" class="text-sm text-gray-800"></fo-label>
+              <fo-label label="Deskripsi Pekerjaan" className="text-sm text-gray-800"></fo-label>
               <p class="mx-4">
                 As a Global Finance & Accounting Intern at EIGER, your mission is to support our finance and accounting team in various functions, including
                 financial analysis, reporting, and compliance. You will gain practical experience in managing financial data, contributing to budgeting
@@ -103,19 +103,19 @@ const fetchListLowongan = async () => {
               </p>
             </div>
             <div>
-              <fo-label label="Durasi" class="text-sm text-gray-800"></fo-label>
+              <fo-label label="Durasi" className="text-sm text-gray-800"></fo-label>
               <p class="mx-4">3 bulan</p>
             </div>
             <div>
-              <fo-label label="Jenis Pekerjaan" class="text-sm text-gray-800"></fo-label>
+              <fo-label label="Jenis Pekerjaan" className="text-sm text-gray-800"></fo-label>
               <p class="mx-4">Fulltime</p>
             </div>
             <div>
-              <fo-label label="Benefit Yang Ditawarkan" class="text-sm text-gray-800"></fo-label>
+              <fo-label label="Benefit Yang Ditawarkan" className="text-sm text-gray-800"></fo-label>
               <p class="mx-4">Gaji pokok per bulan, tunjangan kesehatan</p>
             </div>
             <div>
-              <fo-label label="Tipe Lowongan" class="text-sm text-gray-800"></fo-label>
+              <fo-label label="Tipe Lowongan" className="text-sm text-gray-800"></fo-label>
               <p class="mx-4">Umum</p>
             </div>
           </div>
@@ -148,7 +148,7 @@ const fetchArticle = async () => {
               <div class="text-xl text-blue-800 font-bold">${item.title}</div>
               <div class="text-md">${item.content}</div>
               <div class="flex justify-between items-center">
-                <ui-button color="orange" type="button" href="" class="text-xs font-medium"
+                <ui-button color="orange" type="button" href="" className="text-xs font-medium"
                   >Read more <iconify-icon icon="formkit:arrowright" height="15"></iconify-icon
                 ></ui-button>
                 <div class="flex items-center gap-2">

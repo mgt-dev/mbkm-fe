@@ -100,11 +100,19 @@ class UIPagination extends HTMLElement {
                 Page ${toMonetary((page ?? 1).toString())} of ${toMonetary((Math.ceil(count / limit) ?? 1).toString())}
               </div>
               <div class="flex items-center gap-1">
-                <ui-button size="icon" class="first-page flex items-center justify-center rounded text-white w-7 h-7 p-0" ?disabled=${page === 1 || disabled}>
+                <ui-button
+                  size="icon"
+                  className="first-page flex items-center justify-center rounded text-white w-7 h-7 p-0"
+                  ?disabled=${page === 1 || disabled}
+                >
                   <span class="sr-only">Go to first page</span>
                   <iconify-icon icon="material-symbols:keyboard-double-arrow-left-rounded" width="20" height="20" noobserver></iconify-icon>
                 </ui-button>
-                <ui-button size="icon" class="prev-page flex items-center justify-center rounded text-white w-7 h-7 p-0" ?disabled=${page === 1 || disabled}>
+                <ui-button
+                  size="icon"
+                  className="prev-page flex items-center justify-center rounded text-white w-7 h-7 p-0"
+                  ?disabled=${page === 1 || disabled}
+                >
                   <span class="sr-only">Go to previous page</span>
                   <iconify-icon icon="material-symbols:chevron-left-rounded" width="20" height="20" noobserver></iconify-icon>
                 </ui-button>

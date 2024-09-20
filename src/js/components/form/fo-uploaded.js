@@ -30,10 +30,10 @@ class FormUploaded extends HTMLElement {
             this.getAttribute("className")
           )}
         >
-          <ui-link type="external" href=${this.getAttribute("fileurl")} target="_blank" class="line-clamp-1">
+          <ui-link type="external" href=${this.getAttribute("fileurl")} target="_blank" className="line-clamp-1">
             ${this.getAttribute("filename") ?? this.getAttribute("fileurl")}
           </ui-link>
-          <ui-link type="external" href=${this.getAttribute("fileurl")} target="_blank" class="flex items-center justify-center">
+          <ui-link type="external" href=${this.getAttribute("fileurl")} target="_blank" className="flex items-center justify-center">
             <iconify-icon icon="iconamoon:attachment" height="16" class="text-gray-600 hover:text-gray-500" noobserver></iconify-icon>
           </ui-link>
         </div>
