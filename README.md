@@ -1,9 +1,11 @@
-# MBKM FE
+# Github Pages (MPA)
 
-- [Vinxi](https://vinxi.vercel.app)
-- [Tailwind](https://tailwindcss.com)
 - [uhtml](https://github.com/WebReflection/uhtml)
 - [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
+- [Tailwind (Standalone-CLI)](https://tailwindcss.com/blog/standalone-cli)
+- [View Transition MPA](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API/Using#basic_mpa_view_transition)
+- [Render Blocking](https://fullystacked.net/render-blocking-on-purpose/)
+- [jsDelivr](https://www.jsdelivr.com/)
 
 ### VS Code
 
@@ -12,6 +14,7 @@
 - Prettier - Code formatter
 - Tailwind CSS Intellisense
 - lit-plugin
+- Live Server
 
 ##### Setting (JSON)
 
@@ -22,35 +25,46 @@
 
 ## Development
 
-Install dependencies:
+- Run Live Server
+- Watch tailwind css
 
-```sh
-npm install
+```bash
+tailwindcss -i ./src/css/raw/main.css -o ./src/css/minify/main.min.css --watch
 ```
 
-Run project:
+#### Minifying CSS
 
-```sh
-npm run dev
+```bash
+tailwindcss -i ./src/css/raw/choices.css -o ./src/css/minify/choices.min.css --minify
+tailwindcss -i ./src/css/raw/filepond.css -o ./src/css/minify/filepond.min.css --minify
+tailwindcss -i ./src/css/raw/flatpickr.css -o ./src/css/minify/flatpickr.min.css --minify
+tailwindcss -i ./src/css/raw/micromodal.css -o ./src/css/minify/micromodal.min.css --minify
+tailwindcss -i ./src/css/raw/notify.css -o ./src/css/minify/notify.min.css --minify
+tailwindcss -i ./src/css/raw/main.css -o ./src/css/minify/main.min.css --minify
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+#### BaseUrl
 
-## Deployment
+```js
+// each .html dev-mode
+<base href="/" />
+// each .html prod-mode
+<base href="https://bakazero.github.io/try-github-pages/" />
 
-First, build your app for production:
-
-```sh
-npm run build
+// settings.js dev-mode
+export const baseUrl = "/";
+// settings.js prod-mode
+export const baseUrl = "https://bakazero.github.io/try-github-pages/";
 ```
 
-Check `.output` folder to see build result
-Then run the app in production mode:
+## Switch Mode
 
-```sh
-npm start
-#or
-node .output/server/index.mjs
+If you have [bun](https://bun.sh/) installed, you can easily switch mode.
+
+```bash
+bun switch-mode.js prod
+or
+bun switch-mode.js dev
 ```
 
-Now you'll need to pick a host to deploy it to.
+This command will rewrite your base url, and watch/minifying tailwind css

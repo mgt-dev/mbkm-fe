@@ -3,13 +3,8 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "esModuleInterop": true,
-    "isolatedModules": true,
+    "skipLibCheck": true,
     "checkJs": true,
-    "noEmit": true,
-    "types": ["vinxi/types/client"],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "noEmit": true
   }
 }
