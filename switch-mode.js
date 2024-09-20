@@ -41,7 +41,6 @@ async function runTailwindCommands(isProduction) {
       //   await $`tailwindcss -i ./src/css/raw/choices.css -o ./src/css/minify/choices.min.css --minify`;
       //   await $`tailwindcss -i ./src/css/raw/filepond.css -o ./src/css/minify/filepond.min.css --minify`;
       //   await $`tailwindcss -i ./src/css/raw/flatpickr.css -o ./src/css/minify/flatpickr.min.css --minify`;
-      //   await $`tailwindcss -i ./src/css/raw/micromodal.css -o ./src/css/minify/micromodal.min.css --minify`;
       //   await $`tailwindcss -i ./src/css/raw/notify.css -o ./src/css/minify/notify.min.css --minify`;
       await $`tailwindcss -i ./src/css/raw/main.css -o ./src/css/minify/main.min.css --minify`;
     } else {

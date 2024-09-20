@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-color: 200 40% 40%;
+  --ulbi-orange: 13 82% 54%; /* #EA5329 */
+  --ulbi-blue: 224 54% 23%; /* #1B2C5A */
+  --ulbi-black: 201 78% 7%; /* #041721 */
+  --ulbi-darkorange: 0 0% 0%;
+  --ulbi-darkblue: 0 0% 0%;
+}
+
 /* open-sans-latin-wght-normal */
 @font-face {
   font-family: "Open Sans Variable";
@@ -17,11 +26,15 @@
   navigation: auto;
 }
 
-:root {
-  --main-color: 200 40% 40%;
-  --ulbi-orange: 13 82% 54%; /* #EA5329 */
-  --ulbi-blue: 224 54% 23%; /* #1B2C5A */
-  --ulbi-black: 201 78% 7%; /* #041721 */
-  --ulbi-darkorange: 0 0% 0%;
-  --ulbi-darkblue: 0 0% 0%;
+iconify-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.ui-dialog {
+  display: none;
+}
+.ui-dialog.is-open {
+  display: block;
 }
