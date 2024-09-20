@@ -48,7 +48,7 @@ class FormRadio extends HTMLElement {
           />
           <div
             class=${cn(
-              "h-6 w-6 p-2.5 outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-gray-400 focus:border-gray-400",
+              "h-6 w-6 p-2.5 outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-gray-400 focus:border-gray-400",
               "flex items-center justify-center",
               this.hasAttribute("disabled") && "cursor-not-allowed bg-gray-200",
               this.getAttribute("class")
