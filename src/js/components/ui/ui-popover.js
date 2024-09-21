@@ -34,7 +34,7 @@ class UIPopover extends HTMLElement {
       render(instance) {
         const popper = document.createElement("div");
         const template = html`
-          <div class=${cn("popover-content duration-150 border bg-white p-6 shadow-lg rounded-lg", className)}>
+          <div class=${cn("popover-content z-50 duration-150 border bg-white p-6 shadow-lg rounded-lg", className)}>
             <div>${instance.props.content}</div>
           </div>
         `;

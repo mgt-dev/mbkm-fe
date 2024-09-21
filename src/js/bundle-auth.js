@@ -1,4 +1,5 @@
 import "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/+esm";
+import "../js/components/layout/auth-layout.js";
 import "../js/components/ui/ui-link.js";
 import "../js/components/ui/ui-button.js";
 import "../js/components/ui/ui-popover.js";
@@ -17,5 +18,4 @@ import "../js/components/form/fo-radio.js";
 import "../js/components/form/fo-datepicker.js";
 import "../js/components/form/fo-timepicker.js";
 import "../js/components/form/fo-editor.js";
-import "../js/components/layout/auth-header.js";
 import "../js/customs/logout.js";

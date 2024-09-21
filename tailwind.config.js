@@ -27,6 +27,9 @@ module.exports = {
         ulbiBlue: "hsl(var(--ulbi-blue))",
         ulbiBlack: "hsl(var(--ulbi-black))",
       },
+      transitionProperty: {
+        backdrop: "backdrop-filter", // Add this line to transition the backdrop-filter.
+      },
     },
   },
   plugins: [
