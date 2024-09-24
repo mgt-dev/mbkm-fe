@@ -1,12 +1,29 @@
 import { $ } from "bun";
-import { readFileSync, writeFileSync } from "fs";
+import { readdirSync, readFileSync, writeFileSync, statSync } from "fs";
+import { join, extname } from "path";
+
+function getAllHtmlFiles(dir) {
+  let results = [];
+  const list = readdirSync(dir);
+
+  list.forEach((file) => {
+    const filePath = join(dir, file);
+    const stat = statSync(filePath);
+
+    if (stat && stat.isDirectory()) {
+      // Recursively search in subdirectories
+      results = results.concat(getAllHtmlFiles(filePath));
+    } else if (extname(filePath) === ".html") {
+      results.push(filePath);
+    }
+  });
+
+  return results;
+}
 
 async function modifyBaseHref(isProduction) {
   try {
-    const result = await $`find . -name "*.html"`;
-    const output = result.stdout.toString().trim();
-
-    const filesArray = output.split("\n").filter(Boolean);
+    const filesArray = getAllHtmlFiles(".");
 
     filesArray.forEach((file) => {
       try {
