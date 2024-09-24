@@ -58,7 +58,9 @@ export const baseUrl = "https://bakazero.github.io/try-github-pages/";
 
 ## Switch Mode
 
-If you have [bun](https://bun.sh/) installed, you can easily switch mode.
+If you have [bun](https://bun.sh/) installed, and
+Tailwind (Standalone-CLI) (that can be accessed globally as `tailwindcss`)
+you can easily switch mode by run this code.
 
 ```bash
 bun switch-mode.js prod
