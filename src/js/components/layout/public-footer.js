@@ -52,7 +52,7 @@ class PublicFooter extends HTMLElement {
             </div>
           </div>
           <div class="h-[56px] w-full flex bg-ulbiOrange text-white text-sm justify-center items-center">
-            2024.Universitas Logistik dan Bisnis Internasional (ULBI). Allrights reserved.
+            © 2024 ‧ Universitas Logistik dan Bisnis Internasional (ULBI). All rights reserved.
           </div>
         </footer>
       `

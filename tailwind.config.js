@@ -20,12 +20,11 @@ module.exports = {
         screen: "100dvw",
       },
       colors: {
-        mainColor: "hsl(var(--main-color))",
+        ulbiBlue: "hsl(var(--ulbi-blue))",
         ulbiOrange: "hsl(var(--ulbi-orange))",
+        ulbiBlack: "hsl(var(--ulbi-black))",
         ulbiDarkOrange: "hsl(var(--ulbi-darkorange))",
         ulbiDarkBlue: "hsl(var(--ulbi-darkblue))",
-        ulbiBlue: "hsl(var(--ulbi-blue))",
-        ulbiBlack: "hsl(var(--ulbi-black))",
       },
       transitionProperty: {
         backdrop: "backdrop-filter", // Add this line to transition the backdrop-filter.
