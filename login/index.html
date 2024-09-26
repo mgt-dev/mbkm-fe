@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base href="https://mgt-dev.github.io/mbkm-fe/" />
+    <base href="/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Ini login page" />
@@ -16,25 +16,60 @@
   <body>
     <public-header></public-header>
     <!-- Content  -->
-    <div class="space-y-4 m-4">
-      <div>
-        <h1 class="text-lg font-bold">Login Page</h1>
-        <form id="login-form" class="my-4 space-y-4 max-w-xl">
+    <div class="space-y-4 gap-4 m-4 flex flex-row justify-between">
+      <div class="w-4/5">
+        <div class="text-xl font-bold">Silahkan Login Terlebih Dahulu</div>
+        <p class="my-4 text-xs text-gray-500">
+          Posting Lowongan Anda Langsung Dari Halaman Member. Setiap Saat Dan Kapan Saja Anda Membutuhkan Talenta Terbaik Tinggal Mengisi Form Yang Telah Kami
+          Sediakan Secara Online. Mudah Dan Cepat.
+        </p>
+        <div class="p-6 gap-3 bg-gray-100/40 rounded-md border border-gray-300 shadow-md">
+          <h1 class="mb-2 text-lg font-bold">Masuk Ke Akun Anda</h1>
           <div>
-            <fo-label for="username" label="Username"></fo-label>
-            <fo-input name="username" value="waw"></fo-input>
-            <fo-error name="username"></fo-error>
+            <fo-label for="select" label="Masuk Sebagai"></fo-label>
+            <fo-select name="select" placeholder="Silahkan pilih disini" clearable>
+              <option value="option1">Mahasiswa/Alumni</option>
+              <option value="option2">Mitra/Perusahaan</option>
+            </fo-select>
+            <fo-error name="select"></fo-error>
           </div>
-          <div>
-            <fo-label for="password" label="Password"></fo-label>
-            <fo-input name="password" type="password" value="waw"></fo-input>
-            <fo-error name="password"></fo-error>
+          <form id="login-form" class="my-4 space-y-4 w-full">
+            <div>
+              <fo-label for="email" label="Email"></fo-label>
+              <fo-input name="email" placeholder="waw"></fo-input>
+              <fo-error name="email"></fo-error>
+            </div>
+            <div>
+              <fo-label for="password" label="Password"></fo-label>
+              <fo-input name="password" type="password" value="waw"></fo-input>
+              <fo-error name="password"></fo-error>
+            </div>
+            <div class="flex items-center">
+              <input checked id="Reminder" type="checkbox" value="" class="w-4 h-4 rounded" />
+              <label for="Reminder" class="ms-2">Ingatkan saya</label>
+            </div>
+            <div class="flex justify-between">
+              <ui-button type="submit" variant="ghost" class="p-0">Lupa Password?</ui-button>
+              <ui-button type="submit">MASUK</ui-button>
+            </div>
+          </form>
+        </div>
+
+        <div class="mt-16 p-4 rounded-md border border-gray-300 bg-[url('../../images/logo_ulbi_dark.png')] bg-no-repeat bg-right-top">
+          <div class="flex flex-col gap-3 bg-no-repeat bg-left-top bg-cover relative">
+            <div class="text-xl text-black font-bold">Belum Memiliki Akun?</div>
+            <div class="text-xs">
+              Posting lowongan Anda langsung dari halaman member. Setiap saat dan kapan saja Anda membutuhkan talenta terbaik tinggal mengisi form yang telah
+              kami sediakan secara online. Mudah dan cepat.
+            </div>
+            <div class="grid grid-cols-2 items-center gap-x-4">
+              <ui-button className="w-full" variant="outline_blue" href="/register_student">DAFTAR MAHASISWA/ALUMNI</ui-button>
+              <ui-button className="w-full" variant="outline_blue" href="/register_company">DAFTAR MITRA/PERUSAHAAN</ui-button>
+            </div>
           </div>
-          <div>
-            <ui-button type="submit">Login</ui-button>
-          </div>
-        </form>
+        </div>
       </div>
+      <div><img src="src/images/login_image.png" alt="login-image" /></div>
     </div>
     <!-- End of content  -->
     <public-footer></public-footer>
