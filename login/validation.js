@@ -5,11 +5,11 @@
 export const formValidation = (form, data) => {
   let error = false;
 
-  const username = data.get("username");
+  const email = data.get("email");
   const password = data.get("password");
 
-  if (!username) {
-    form.querySelectorAll("[name='username']").forEach((element) => element.setAttribute("error", "This field is required"));
+  if (!email) {
+    form.querySelectorAll("[name='email']").forEach((element) => element.setAttribute("error", "This field is required"));
     error = true;
   }
 
