@@ -17,20 +17,26 @@ class PublicHeader extends HTMLElement {
       this,
       html`
         <header>
-          <div class="h-[34px] w-full flex bg-ulbiOrange text-white text-sm gap-6 justify-center items-center">
+          <div class="p-2 w-full flex bg-ulbiOrange text-white text-sm gap-6 justify-center items-center whitespace-nowrap overflow-clip">
             <span>+62821 2000 2716</span>
             <span>+62813 1111 0194</span>
             <span>info@ulbi.ac.id</span>
             <span>Jl. Sariasih No.54, Sarijadi, Sukasari, Kota Bandung</span>
           </div>
-          <div class="h-[80px] w-full flex gap-6 justify-evenly items-center shadow-md">
+          <div class="h-[80px] w-full flex gap-6 justify-evenly items-center shadow-sm">
             <div class="flex gap-6 items-center">
-              <img width="${150}" src="src/images/logo_ulbi_header.png" alt="logo" />
-              <ui-link href="" className="text-gray-600 font-semibold hover:text-blue-400">Home</ui-link>
-              <ui-link href="about" className="text-gray-600 font-semibold hover:text-blue-400">Tentang</ui-link>
+              <a href="" class="hover:opacity-90 duration-150">
+                <img width="${150}" src="src/images/logo_ulbi_header.png" alt="logo" />
+              </a>
+              <a href="about" class="text-gray-600 font-semibold hover:text-gray-600/90 duration-150">Tentang</a>
             </div>
             <div class="flex gap-6">
-              <ui-button color="orange" type="button" href="/login">Login</ui-button>
+              <a
+                href="login/"
+                class="px-8 py-2 text-sm text-white font-semibold flex items-center justify-center rounded-md transition-colors duration-150 border border-orange-400 bg-orange-400 hover:bg-orange-400/90"
+              >
+                Login
+              </a>
             </div>
           </div>
         </header>
