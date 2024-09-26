@@ -1,7 +1,7 @@
 import { timeout } from "./src/js/libraries/utilities.js";
 
 export const listLowonganMagangDummy = async () => {
-  await timeout(300);
+  await timeout(3000);
 
   return [
     {
