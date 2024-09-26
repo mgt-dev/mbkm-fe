@@ -20,6 +20,8 @@ class AuthLayout extends HTMLElement {
   sidebarTemplate() {
     const path = new URL(window.location.href).pathname;
 
+    console.log(path);
+
     const listNavSidebar = [
       {
         name: "Beranda",
