@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base href="https://mgt-dev.github.io/mbkm-fe/" />
+    <base href="/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
@@ -144,9 +144,8 @@
               </div>             
             </form>            
           </div>
-          <div class="flex justify-end gap-4">
-            <ui-button type="submit" href="">Sebelumnya</ui-button>
-            <ui-button type="submit" href="">Selanjutnya</ui-button>
+          <div class="flex justify-end gap-4">      
+            <ui-button type="button" data-tab-target="1">Selanjutnya</ui-button>
           </div>
         </div>
         <div class="hidden mx-16 p-4 rounded-lg" id="styled-confirmation" role="tabpanel" aria-labelledby="confirmation-tab">
@@ -163,11 +162,10 @@
           </div>
           <div class="text-sm font-semibold">Kirim Ulang Kode Verifikasi <span class="text-blue-800">04:30</span></div>
           <div class="flex justify-end gap-4">
-            <ui-button type="submit" href="">Sebelumnya</ui-button>
-            <ui-button type="submit" href="">Selanjutnya</ui-button>
+            <ui-button type="button" data-tab-target="0">Sebelumnya</ui-button>
+            <ui-button type="button" data-tab-target="2">Selanjutnya</ui-button>
           </div>
-        </div>
-        
+        </div>        
         </div>
         <div class="hidden mx-16 p-4 rounded-lg" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
           <div class="text-xl font-bold">Informasi Perusahaan</div>
@@ -219,8 +217,8 @@
               </div>        
             </form>  
             <div class="flex justify-end gap-4">
-              <ui-button type="submit" href="">Sebelumnya</ui-button>
-              <ui-button type="submit" href="">Selanjutnya</ui-button>
+              <ui-button type="button" data-tab-target="1">Sebelumnya</ui-button>
+              <ui-button type="button" data-tab-target="3">Selanjutnya</ui-button>
             </div>      
           </div>
             
@@ -251,6 +249,7 @@
                 <fo-error name="phoneNumber"></fo-error>
               </div>         
               <div class="flex justify-end">
+                <ui-button type="button" data-tab-target="2">Sebelumnya</ui-button>
                 <ui-button type="submit" href="">Buat Akun</ui-button>
               </div> 
             </form>
