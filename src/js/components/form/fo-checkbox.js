@@ -2,6 +2,7 @@ import { cn } from "../../libraries/tailwind.js";
 import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
 import "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/+esm";
 import "./fo-label.js";
+
 /**
  * @element fo-checkbox
  *

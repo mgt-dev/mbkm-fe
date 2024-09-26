@@ -34,11 +34,16 @@ class UIPopover extends HTMLElement {
       render(instance) {
         const popper = document.createElement("div");
         const template = html`
-          <div class=${cn("popover-content z-50 duration-150 border bg-white p-6 shadow-lg rounded-lg", className)}>
+          <div class=${cn("popover-content z-50 duration-150 border bg-white px-4 py-3 shadow-lg rounded-lg", className)}>
             <div>${instance.props.content}</div>
           </div>
         `;
         render(popper, template);
+
+        popper.querySelector("[data-popover-close]")?.addEventListener("click", () => {
+          instance.hide();
+        });
+
         return { popper };
       },
       onShow(instance) {

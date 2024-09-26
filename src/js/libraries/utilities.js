@@ -17,3 +17,8 @@ export const toMonetary = (input) => {
   if (!input) return "0";
   return input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 };
+
+export const capitalizeEachWord = (input) => {
+  if (!input) return "";
+  return input.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+};

@@ -18,6 +18,6 @@ if (form instanceof HTMLFormElement) {
     await setAuth(token);
 
     await setFlashMessage("Login Success");
-    window.location.assign(`${baseUrl}dashboard`);
+    window.location.assign(`${baseUrl}beranda`);
   });
 }

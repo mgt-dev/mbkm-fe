@@ -18,4 +18,3 @@ import "../js/components/form/fo-radio.js";
 import "../js/components/form/fo-datepicker.js";
 import "../js/components/form/fo-timepicker.js";
 import "../js/components/form/fo-editor.js";
-import "../js/customs/logout.js";
