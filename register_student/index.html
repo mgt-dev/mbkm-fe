@@ -198,28 +198,26 @@
                 <fo-input name="semester" value="" placeholder="Contoh:namaanda@mail.com"></fo-input>
                 <fo-error name="semester"></fo-error>
               </div>
-              <div class="grid grid-cols-3">
+              <div class="grid grid-cols-3 gap-4">
                 <div class="col-span-1">                  
-                    <fo-label label="File Upload"></fo-label>
-                    <fo-uploaded fileurl="https://google.com" filename="template-dokument-surat-menyurat.pdf" className="mb-2"></fo-uploaded>
+                    <fo-label label="Upload Foto Profil"></fo-label>                    
+                    <fo-uploaded fileurl="https://google.com" filename="" className="mb-2 min-h-24" ></fo-uploaded>
                     <fo-file name="fileUpload" accept="application/pdf"></fo-file>
                     <fo-error name="fileUpload"></fo-error>                                                    
                 </div>
                 <div class="col-span-2">
                   <fo-label for="deskripsi" label="Deskripsi Singkat Profil"></fo-label>
                   <fo-textarea
-                    class="min-h-24 border border-gray-300 rounded-md"
+                    class="min-h-24"
                     name="textArea"
                     placeholder="Silahkan isi disini"
                     value="."
-              ></fo-textarea>
-              <div></div>
+              ></fo-textarea>             
               <fo-error name="textArea"></fo-error>
                 </div>
-              </div>
-              
+              </div>              
             </form>
-            <div class="flex justify-end gap-4">
+            <div class="mt-8 flex justify-end gap-4">
               <ui-button type="submit" href="">Sebelumnya</ui-button>
               <ui-button type="submit" href="">Selanjutnya</ui-button>
             </div>

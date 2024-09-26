@@ -11,3 +11,5 @@ import "../js/components/form/fo-input.js";
 import "../js/components/form/fo-select.js";
 import "../js/components/form/fo-checkbox.js";
 import "../js/components/form/fo-radio.js";
+import "../js/components/form/fo-textarea.js";
+import "../js/components/form/fo-uploaded.js";
