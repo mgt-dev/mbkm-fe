@@ -52,8 +52,10 @@ tailwindcss -i ./src/css/raw/main.css -o ./src/css/minify/main.min.css --minify
 
 // settings.js dev-mode
 export const baseUrl = "/";
+export const slugUri = "/";
 // settings.js prod-mode
-export const baseUrl = "https://bakazero.github.io/try-github-pages/";
+export const baseUrl = "https://mgt-dev.github.io/mbkm-fe/";
+export const slugUri = "mbkm-fe/"
 ```
 
 ## Switch Mode
