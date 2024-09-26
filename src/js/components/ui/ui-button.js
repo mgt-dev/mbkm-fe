@@ -22,7 +22,7 @@ class UIButton extends HTMLElement {
   connectedCallback() {
     this.renderTemplate();
     this.component = this.querySelector("button");
-    // this.component.addEventListener("click", this.handleClick.bind(this));
+    this.component.addEventListener("click", this.handleClick.bind(this));
   }
 
   static get observedAttributes() {
@@ -34,12 +34,12 @@ class UIButton extends HTMLElement {
     this.renderTemplate();
   }
 
-  // handleClick() {
-  //   const href = this.getAttribute("href");
-  //   if (href) {
-  //     window.location.href = href; // Redirect ke URL yang diberikan
-  //   }
-  // }
+  handleClick() {
+    const href = this.getAttribute("href");
+    if (href) {
+      window.location.href = href; // Redirect ke URL yang diberikan
+    }
+  }
 
   renderTemplate() {
     const variant = this.getAttribute("variant") || "default";
