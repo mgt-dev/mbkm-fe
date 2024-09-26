@@ -55,7 +55,7 @@ export const baseUrl = "/";
 export const slugUri = "/";
 // settings.js prod-mode
 export const baseUrl = "https://mgt-dev.github.io/mbkm-fe/";
-export const slugUri = "mbkm-fe/"
+export const slugUri = "/mbkm-fe/"
 ```
 
 ## Switch Mode
