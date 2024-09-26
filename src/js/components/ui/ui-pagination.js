@@ -118,7 +118,7 @@ class UIPagination extends HTMLElement {
                 </ui-button>
                 <ui-button
                   size="icon"
-                  class="next-page flex items-center justify-center rounded text-white w-7 h-7 p-0"
+                  className="next-page flex items-center justify-center rounded text-white w-7 h-7 p-0"
                   ?disabled=${count / limit === 0 || Math.ceil(count / limit) === (page ?? 1) || disabled}
                 >
                   <span class="sr-only">Go to next page</span>
@@ -126,7 +126,7 @@ class UIPagination extends HTMLElement {
                 </ui-button>
                 <ui-button
                   size="icon"
-                  class="last-page flex items-center justify-center rounded text-white w-7 h-7 p-0"
+                  className="last-page flex items-center justify-center rounded text-white w-7 h-7 p-0"
                   ?disabled=${count / limit === 0 || Math.ceil(count / limit) === (page ?? 1) || disabled}
                 >
                   <span class="sr-only">Go to last page</span>
