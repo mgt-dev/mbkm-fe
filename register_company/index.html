@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base href="https://mgt-dev.github.io/mbkm-fe/" />
+    <base href="/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
@@ -198,17 +198,17 @@
                 <fo-input name="companyWebsite" value="" placeholder="Contoh:websiteanda.com"></fo-input>
                 <fo-error name="companyWebsite"></fo-error>
               </div>
-              <div class="grid grid-cols-3">
+              <div class="grid grid-cols-3 gap-4">
                 <div class="col-span-1">
-                  <fo-label label="File Upload"></fo-label>
-                  <fo-uploaded fileurl="https://google.com" filename="template-dokument-surat-menyurat.pdf" className="mb-2"></fo-uploaded>
+                  <fo-label label="Upload Foto Profil"></fo-label>
+                  <fo-uploaded fileurl="https://google.com" filename="" className="mb-2 min-h-24"></fo-uploaded>
                   <fo-file name="fileUpload" accept="application/pdf"></fo-file>
                   <fo-error name="fileUpload"></fo-error>
                 </div>
                 <div class="col-span-2">
                   <fo-label for="deskripsi" label="Deskripsi Singkat Profil"></fo-label>
                   <fo-textarea
-                    class="min-h-24 border border-gray-300 rounded-md"
+                    className="min-h-24"
                     name="textArea"
                     placeholder="Silahkan isi disini"
                     value="."
