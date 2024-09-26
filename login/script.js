@@ -1,7 +1,7 @@
 import { timeout } from "../src/js/libraries/utilities.js";
 import { setAuth, setFlashMessage } from "../src/js/libraries/cookies.js";
 import { formValidation } from "./validation.js";
-import { baseUrl } from "../src/js/customs/settings.js";
+import { slugUri } from "../src/js/customs/settings.js";
 
 const form = document.getElementById("login-form");
 if (form instanceof HTMLFormElement) {
@@ -18,6 +18,6 @@ if (form instanceof HTMLFormElement) {
     await setAuth(token);
 
     await setFlashMessage("Login Success");
-    window.location.assign(`${baseUrl}beranda`);
+    window.location.assign(`${slugUri}beranda`);
   });
 }

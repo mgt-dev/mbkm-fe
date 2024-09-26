@@ -44,11 +44,18 @@ async function updateBaseUrl(isProduction) {
   try {
     const settingsPath = "./src/js/customs/settings.js";
     const content = readFileSync(settingsPath, "utf-8");
+
     const newBaseUrl = isProduction ? "https://mgt-dev.github.io/mbkm-fe/" : "/";
-    const updatedContent = content.replace(/export const baseUrl = ".*?";/, `export const baseUrl = "${newBaseUrl}";`);
+    const newSlugUri = isProduction ? "mbkm-fe/" : "/";
+
+    const updatedContent = content
+      .replace(/export const baseUrl = ".*?";/, `export const baseUrl = "${newBaseUrl}";`)
+      .replace(/export const slugUri = ".*?";/, `export const slugUri = "${newSlugUri}";`);
+
     writeFileSync(settingsPath, updatedContent, "utf-8");
+    console.log("Settings updated successfully.");
   } catch (err) {
-    console.error("Error updating baseUrl:", err);
+    console.error("Error updating baseUrl or slugUri:", err);
   }
 }
 

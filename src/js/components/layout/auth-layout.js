@@ -1,6 +1,6 @@
 import { cn } from "../../libraries/tailwind.js";
 import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
-import { baseUrl } from "../../customs/settings.js";
+import { slugUri } from "../../customs/settings.js";
 import { removeAuth } from "../../libraries/cookies.js";
 import { capitalizeEachWord } from "../../libraries/utilities.js";
 
@@ -18,62 +18,60 @@ class AuthLayout extends HTMLElement {
   }
 
   sidebarTemplate() {
-    const path = new URL(window.location.href).pathname;
-
-    console.log(path);
+    const path = new URL(window.location.href).pathname.replace(slugUri, "/");
 
     const listNavSidebar = [
       {
         name: "Beranda",
-        href: `${baseUrl}beranda/`,
+        href: `${slugUri}beranda/`,
         icon: "solar:home-smile-angle-bold",
         active: path.startsWith("/beranda/"),
       },
       {
         name: "Lowongan",
-        href: `${baseUrl}lowongan/`,
+        href: `${slugUri}lowongan/`,
         icon: "solar:case-round-bold",
         active: path.startsWith("/lowongan/"),
       },
       {
         name: "Kandidat",
-        href: `${baseUrl}kandidat/`,
+        href: `${slugUri}kandidat/`,
         icon: "solar:user-hands-bold",
         active: path.startsWith("/kandidat/"),
       },
       {
         name: "Penilaian",
-        href: `${baseUrl}penilaian/`,
+        href: `${slugUri}penilaian/`,
         icon: "solar:medal-star-bold",
         active: path.startsWith("/penilaian/"),
       },
       {
         name: "Laporan",
-        href: `${baseUrl}laporan/`,
+        href: `${slugUri}laporan/`,
         icon: "solar:documents-bold",
         active: path.startsWith("/laporan/"),
       },
       {
         name: "Component",
-        href: `${baseUrl}component/`,
+        href: `${slugUri}component/`,
         icon: "material-symbols:dashboard",
         active: path.startsWith("/component/"),
       },
       {
         name: "Form",
-        href: `${baseUrl}form/`,
+        href: `${slugUri}form/`,
         icon: "material-symbols:dashboard",
         active: path.startsWith("/form/"),
       },
       {
         name: "Table",
-        href: `${baseUrl}table/`,
+        href: `${slugUri}table/`,
         icon: "material-symbols:dashboard",
         active: path.startsWith("/table/"),
       },
       {
         name: "User",
-        href: `${baseUrl}user/`,
+        href: `${slugUri}user/`,
         icon: "material-symbols:dashboard",
         active: path.startsWith("/user/"),
       },
@@ -176,7 +174,10 @@ class AuthLayout extends HTMLElement {
   }
 
   headerTemplate() {
-    const path = new URL(window.location.href).pathname.split("/").filter((item) => item.length > 0);
+    const path = new URL(window.location.href).pathname
+      .replace(slugUri, "/")
+      .split("/")
+      .filter((item) => item.length > 0);
 
     return html`
       <header class="sticky z-10 top-0 h-24 bg-ulbiBlue text-white border-b-8 border-ulbiOrange flex items-center px-4 justify-between overflow-clip">
@@ -252,7 +253,7 @@ class AuthLayout extends HTMLElement {
     document.getElementById("logoutButton")?.addEventListener("click", async (event) => {
       event.preventDefault();
       await removeAuth();
-      window.location.assign(`${baseUrl}login`);
+      window.location.assign(`${slugUri}login`);
     });
   }
 }
