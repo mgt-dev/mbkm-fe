@@ -1,3 +1,4 @@
+import { slugUri } from "../../customs/settings.js";
 import { cn } from "../../libraries/tailwind.js";
 import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
 
@@ -37,7 +38,7 @@ class UIButton extends HTMLElement {
   handleClick() {
     const href = this.getAttribute("href");
     if (href) {
-      window.location.href = href; // Redirect ke URL yang diberikan
+      window.location.assign(`${slugUri}${href}`); // Redirect ke URL yang diberikan
     }
   }
 
