@@ -185,3 +185,25 @@ if (form instanceof HTMLFormElement) {
     event.preventDefault();
   });
 }
+
+// show/hide filter
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterSection = document.getElementById("filter-section");
+  const toggleButton = document.getElementById("toggle-filter");
+  const icon = toggleButton.querySelector("iconify-icon");
+  const toggleText = document.getElementById("toggle-text");
+
+  // Handle toggle visibility of the filter section
+  toggleButton.addEventListener("click", function () {
+    if (filterSection.classList.contains("hidden")) {
+      filterSection.classList.remove("hidden");
+      toggleText.textContent = "Tutup Filter";
+      icon.setAttribute("icon", "solar:alt-arrow-up-outline");
+    } else {
+      filterSection.classList.add("hidden");
+      toggleText.textContent = "Tampilkan Filter";
+      icon.setAttribute("icon", "solar:alt-arrow-down-outline");
+    }
+  });
+});

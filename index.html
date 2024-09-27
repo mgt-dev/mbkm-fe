@@ -20,7 +20,6 @@
     </div>
     <div class="mx-auto max-w-[90dvw] 2xl:max-w-7xl my-8 flex flex-col gap-8 text-gray-500">
       <h2 class="text-3xl text-center font-bold text-black">Lowongan Magang</h2>
-
       <form id="filter-form" class="p-4 flex flex-col gap-3 bg-gray-300/10 rounded-md border border-gray-300">
         <fo-label className="mt-1" for="keyword" label="Cari Berdasarkan Perusahaan, Pekerjaan dan Program Studi"></fo-label>
         <div class="relative -mt-3">
@@ -29,11 +28,75 @@
             Cari
           </button>
         </div>
-        <div class="flex gap-1 justify-center items-center mt-1">
-          <div class="font-semibold text-xs">Tampilkan filter</div>
-          <iconify-icon icon="solar:alt-arrow-down-outline" class="text-gray-500" height="16" noobserver></iconify-icon>
+        <div class="flex flex-warp justify-evenly items-center mt-1">
+          <div id="filter-section" class="hidden my-4 gap-3 justify-between items-center text-xs transition-all duration-300">
+            <!-- Bagian filter -->
+            <div class="w-full grid grid-cols-3 gap-4">
+              <div>
+                <div class="mb-2 font-semibold">Periode:</div>
+                <fo-select class="w-full px-4 py-2">                 
+                  <option>Januari 2024</option>
+                  <option>Februari 2024</option>
+                  <option>Maret 2024</option>
+                </fo-select>
+              </div>
+              <div>
+                <div class="mb-2 font-semibold">Perusahaan:</div>
+                <fo-select class="w-full px-4 py-2">                  
+                  <option>PT. Pos Indonesia</option>
+                </fo-select>
+              </div>
+              <div>
+                <div class="mb-2 font-semibold">Matakuliah:</div>
+                <fo-select class="w-full px-4 py-2">                  
+                  <option>Accounting</option>
+                  <option>Marketing</option>
+                  <option>Finance</option>
+                </fo-select>
+              </div>
+            </div>
+            <div class="w-full grid grid-cols-3 gap-4">
+              <div>
+                <div class="mb-2 font-semibold">Kategori:</div>
+                <div class="flex flex-row gap-4">
+                  <div class="flex items-center">
+                    <input checked id="Umum" type="checkbox" value="" class="w-4 h-4 rounded" />
+                    <label for="Umum" class="ms-2">Umum</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="Privat" type="checkbox" value="" class="w-4 h-4 rounded" />
+                    <label for="Privat" class="ms-2">Privat</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-2 font-semibold">Status:</div>
+                <div class="flex flex-row gap-4">
+                  <div class="flex items-center">
+                    <input checked id="Semua" type="radio" value="" name="default-radio" class="w-4 h-4" />
+                    <label for="Semua" class="ms-2">Semua</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="Tersedia" type="radio" value="" name="default-radio" class="w-4 h-4" />
+                    <label for="Tersedia" class="ms-2">Tersedia</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input checked id="Terbatas" type="radio" value="" name="default-radio" class="w-4 h-4" />
+                    <label for="Terbatas" class="ms-2">Terbatas</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>                    
         </div>
+        <!-- Tombol Toggle -->
+        <div class="flex justify-center items-center gap-2 font-semibold text-xs cursor-pointer" id="toggle-filter">
+          <iconify-icon icon="solar:alt-arrow-down-outline" class="text-gray-500" height="16"></iconify-icon>
+          <span id="toggle-text">Tampilkan Filter</span>
+        </div>
+        <!--end of filter section-->
       </form>
+    </form>  
 
       <div id="totalLowonganMagang" class="text-sm font-semibold">Total: ... Lowongan Magang</div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 -mt-6">
@@ -55,9 +118,9 @@
             sediakan secara online. Mudah dan cepat.
           </div>
           <div class="grid grid-cols-3 items-center gap-x-4">
-            <ui-button className="w-full" variant="outline_blue">REGISTER JOB SEEKER</ui-button>
-            <ui-button className="w-full" variant="outline_blue">REGISTER EMPLOYER</ui-button>
-            <ui-button className="w-full" variant="default">LOGIN</ui-button>
+            <ui-button className="w-full" variant="outline_blue" href="/register_student">REGISTER JOB SEEKER</ui-button>
+            <ui-button className="w-full" variant="outline_blue" href="/register_company">REGISTER EMPLOYER</ui-button>
+            <ui-button className="w-full" variant="default" href="/login">LOGIN</ui-button>
           </div>
         </div>
       </div>
