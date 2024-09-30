@@ -6,7 +6,7 @@ import { html, render } from "https://cdn.jsdelivr.net/npm/uhtml@4.5.11/+esm";
 class UICarousel extends HTMLElement {
   constructor() {
     super();
-    this.content = Array.from(this.querySelectorAll("img"));
+    this.content = Array.from(this.querySelectorAll("a"));
     this.currentIndex = 0;
     this.interval = 5000;
   }
@@ -22,7 +22,7 @@ class UICarousel extends HTMLElement {
       html`
         <div class="relative overflow-hidden w-full">
           <div class="flex transition-transform duration-300 ease-in-out" id="carousel-track">
-            ${this.content.map((img) => html`<div class="w-full flex-shrink-0">${img}</div>`)}
+            ${this.content.map((link) => html`<div class="w-full flex-shrink-0">${link}</div>`)}
           </div>
 
           <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2" id="carousel-dots">
