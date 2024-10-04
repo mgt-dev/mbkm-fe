@@ -19,12 +19,13 @@ class UIBadge extends HTMLElement {
 
   renderTemplate() {
     const hasDot = this.hasAttribute("dot");
+    const content = this.textContent;
 
     render(
       this,
       html`
-        <div class=${cn("rounded-xl px-2 py-1 text-xs font-medium flex items-center gap-2 shrink-0 w-fit", this.getAttribute("className"))}>
-          ${hasDot ? html`<span class="w-2 h-2 rounded-full bg-current"></span>` : ""} ${this.content}
+        <div class=${cn("rounded-xl px-2 py-1 text-xs font-medium flex items-center gap-2 shrink-0 w-fit bg-inherit", this.getAttribute("className"))}>
+          ${hasDot ? html`<span class="w-2 h-2 rounded-full bg-current"></span>` : ""} ${content}
         </div>
       `
     );

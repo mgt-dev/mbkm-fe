@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Beranda page" />
+    <title>Lowongan</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script src="src/js/guard-auth.js" type="module"></script>
+    <script src="src/js/bundle-auth.js" type="module" defer blocking="render" fetchpriority="high"></script>
+    <script src="new_post/script.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <auth-layout>
+      <!-- Content  -->
+      <div class="space-y-4">
+        <div class="p-4 flex flex-col gap-4 rounded-md shadow-md">
+          <div class="text-md font-bold">Buat Postingan Lowongan Magang</div>
+          <div class="border-t border-gray-300 border-dashed"></div>
+          <div>
+            <fo-select>
+              <fo-label label="Perusahaan"></fo-label>
+              <option>PT. Pos Indonesia</option>
+            </fo-select>
+          </div>
+          <div>
+            <fo-label label="Upload Gambar Lowongan"></fo-label>
+            <fo-file className="min-h-24" name="fileUpload" accept="application/pdf"></fo-file>
+            <fo-error name="fileUpload"></fo-error>
+          </div>
+          <div>
+            <fo-label for="title" label="Judul"></fo-label>
+            <fo-input name="title" value="" placeholder=""></fo-input>
+            <fo-error name="title"></fo-error>
+          </div>
+          <div>
+            <fo-label for="description" label="Deskripsi Pekerjaan"></fo-label>
+            <fo-textarea
+              className="min-h-150"
+              name="textArea"
+              placeholder="Silahkan isi disini"
+              value="."
+        ></fo-textarea>
+        <div>
+          <fo-label for="duration" label="Durasi"></fo-label>
+          <fo-input name="duration" value="" placeholder="3 bulan"></fo-input>
+          <fo-error name="duration"></fo-error>
+        </div>
+        <div>
+          <fo-label for="work_type" label="Jenis Pekerjaan"></fo-label>
+          <fo-input name="work_type" value="" placeholder="fulltime"></fo-input>
+          <fo-error name="work_type"></fo-error>
+        </div>
+        <div>
+          <div class="flex justify-between">
+            <fo-label for="benefit" label="Benefit Yang Ditawarkan"></fo-label>
+            <ui-button type="button" variant="ghost">+ Tambah Benefit</ui-button>
+          </div>
+          <fo-input name="benefit" value="" placeholder="Gaji Pokok Per Bulan Rp 3.000.000"></fo-input>
+          <fo-input name="benefit" value="" placeholder="Tunjangan Kesehatan"></fo-input>
+          <fo-input name="benefit" value="" placeholder="Transportasi"></fo-input>
+          <fo-error name="benefit"></fo-error>
+          <div>
+            <fo-label for="status" label="Status"></fo-label>
+            <fo-input name="status" value="" placeholder="tersedia"></fo-input>
+            <fo-error name="status"></fo-error>
+          </div>
+          <div>
+            <fo-label for="type" label="Tipe Lowongan"></fo-label>
+            <fo-input name="type" value="" placeholder="Umum"></fo-input>
+            <fo-error name="type"></fo-error>
+          </div>
+          <div>
+            <fo-label for="deadline" label="Batas Akhir Pendaftaran"></fo-label>
+            <fo-input name="deadline" value="" placeholder="6 September 2024"></fo-input>
+            <fo-error name="deadline"></fo-error>
+          </div>
+        </div>
+        </div>
+        `
+      </div>
+      <!-- End of content  -->
+    </auth-layout>
+  </body>
+</html>

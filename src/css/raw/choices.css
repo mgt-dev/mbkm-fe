@@ -133,7 +133,7 @@
   padding: 6px 3.75px 4px;
   border: 1px solid #d1d5db;
   border-radius: 0.5rem /* 8px */;
-  font-size: 14px;
+  font-size: 12px;
   min-height: 42px;
   overflow: hidden;
 }
@@ -246,7 +246,7 @@
 .choices__list[aria-expanded] .choices__item {
   position: relative;
   padding: 10px;
-  font-size: 14px;
+  font-size: 12px;
 }
 [dir="rtl"] .choices__list--dropdown .choices__item,
 [dir="rtl"] .choices__list[aria-expanded] .choices__item {

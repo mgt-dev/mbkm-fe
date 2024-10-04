@@ -1,6 +1,7 @@
 import "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/+esm";
 import "../js/components/layout/auth-layout.js";
 import "../js/components/ui/ui-link.js";
+import "../js/components/ui/ui-badge.js";
 import "../js/components/ui/ui-button.js";
 import "../js/components/ui/ui-popover.js";
 import "../js/components/ui/ui-dialog.js";
