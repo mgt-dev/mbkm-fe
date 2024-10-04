@@ -15,9 +15,16 @@
   <body>
     <public-header></public-header>
     <!-- Content  -->
-    <div class="mx-auto max-w-[90dvw] rounded overflow-hidden">
-      <img src="src/images/dummy_banner_1.png" alt="banner" />
-    </div>
+
+    <ui-carousel>
+      <a class="hover:opacity-90 duration-150" href="https://mmlog.ulbi.ac.id/p/jalur-regular.html">
+        <img src="src/images/dummy_banner_1.png" alt="Slide 1" />
+      </a>
+      <a class="hover:opacity-90 duration-150" href="https://admission.ulbi.ac.id/p/ikatan-dinas-dan-beasiswa-posind.html">
+        <img src="src/images/dummy_banner_2.png" alt="Slide 2">
+      </a>
+    </ui-carousel>
+    
     <div class="mx-auto max-w-[90dvw] 2xl:max-w-7xl my-8 flex flex-col gap-8 text-gray-500">
       <h2 class="text-3xl text-center font-bold text-black">Lowongan Magang</h2>
       <form id="filter-form" class="p-4 flex flex-col gap-3 bg-gray-300/10 rounded-md border border-gray-300">
@@ -103,9 +110,9 @@
             sediakan secara online. Mudah dan cepat.
           </div>
           <div class="grid grid-cols-3 items-center gap-x-4">
-            <ui-button className="w-full" variant="outline_blue" href="/register_student">REGISTER JOB SEEKER</ui-button>
-            <ui-button className="w-full" variant="outline_blue" href="/register_company">REGISTER EMPLOYER</ui-button>
-            <ui-button className="w-full" variant="default" href="/login">LOGIN</ui-button>
+            <ui-button className="w-full" variant="outline_blue" href="register_student/">REGISTER JOB SEEKER</ui-button>
+            <ui-button className="w-full" variant="outline_blue" href="register_company/">REGISTER EMPLOYER</ui-button>
+            <ui-button className="w-full" variant="default" href="login/">LOGIN</ui-button>
           </div>
         </div>
       </div>

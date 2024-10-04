@@ -37,9 +37,7 @@ class UIButton extends HTMLElement {
 
   handleClick() {
     const href = this.getAttribute("href");
-    if (href) {
-      window.location.assign(`${slugUri}${href}`); // Redirect ke URL yang diberikan
-    }
+    if (href) window.location.assign(`${slugUri}${href}`);
   }
 
   renderTemplate() {
