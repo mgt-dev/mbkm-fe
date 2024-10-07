@@ -26,6 +26,22 @@
               <option>PT. Pos Indonesia</option>
             </fo-select>
           </div>
+          <div class="flex border border-gray-300 rounded-md">
+            <div class="pl-2 w-[120px] flex overflow-hidden rounded-l-lg">
+              <img class="object-center object-contain" src="src/images/dummy_pos_ind.png" height="[100px]" alt="image" />
+            </div>
+            <div class="p-4 flex flex-col gap-1">
+              <div class="text-md font-semibold">PT. Pos Indonesia</div>
+              <div class="flex justify-start items-center gap-2">
+                <iconify-icon icon="solar:buildings-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
+                <div class="text-xs">PT. Pos Indonesia</div>
+              </div>
+              <div class="flex justify-start items-center gap-2">
+                <iconify-icon icon="solar:map-point-bold-duotone" height="22" class="text-ulbiOrange" noobserver></iconify-icon>
+                <div class="text-xs">Bandung, Jawa Barat</div>
+              </div>
+            </div>
+          </div>
           <div>
             <fo-label label="Upload Gambar Lowongan"></fo-label>
             <fo-file className="min-h-24" name="fileUpload" accept="application/pdf"></fo-file>
@@ -36,9 +52,9 @@
             <fo-input name="title" value="" placeholder=""></fo-input>
             <fo-error name="title"></fo-error>
           </div>
-          <div>
+          <div class="mt-4 max-w-5xl">
             <fo-label for="description" label="Deskripsi Pekerjaan"></fo-label>
-            <fo-textarea className="min-h-150" name="textArea" placeholder="Silahkan isi disini" value="."></fo-textarea>
+            <fo-editor></fo-editor>
           </div>
           <div>
             <fo-label for="duration" label="Durasi"></fo-label>
@@ -77,7 +93,19 @@
             <fo-input name="deadline" value="" placeholder="6 September 2024"></fo-input>
             <fo-error name="deadline"></fo-error>
           </div>
-          <div class="mt-2 flex justify-end"><ui-button variant="default">Submit Lowongan</ui-button></div>
+          <div class="flex justify-end">
+            <ui-button variant="default" data-dialog-trigger="submit-data">SUBMIT LOWONGAN</ui-button>
+            <ui-dialog name="submit-data" className="w-[750px] h-[320px]">
+              <div class="flex flex-col text-center justify-center items-center gap-3">
+                <div class="test-md font-bold">Postingan Berhasil Diajukan</div>
+                <iconify-icon icon="solar:verified-check-bold-duotone" height="96" class="text-green-600" noobserver></iconify-icon>
+                <div class="text-sm font-semibold">Postingan Anda Akan Kami Tinjau Maksimal 2x24 Jam</div>
+                <div class="text-xs">Akun Perusahaan Anda Kini Dapat Melakukan Posting Lowongan Magang Pada Website MBKM ULBI</div>
+                <div class="text-xs">Silahkan Masuk Menggunakan Akun Yang Telah Anda Buat Untuk Melakukan Posting Lowongan Magang</div>
+                <ui-button data-dialog-close>SELESAI</ui-button>
+              </div>
+            </ui-dialog>
+          </div>
         </div>
         `
       </div>
