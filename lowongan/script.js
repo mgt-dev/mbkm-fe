@@ -5,7 +5,6 @@ import { toMonetary } from "../src/js/libraries/utilities.js";
 const fetchLowonganMagang = async () => {
   const rekap = await rekapLowonganMagangDummy();
 
-  console.log(rekap);
   render(
     document.getElementById("rekapLowonganMagang"),
     html`
@@ -81,8 +80,8 @@ const fetchListLowongan = async () => {
                   <div class="font-semibold">${item.applicants} Kandidat Mendaftar</div>
                 </div>
                 <div class="flex gap-2">
-                  <ui-button variant="outline_orange" type="button" href="">Detail</ui-button>
-                  <ui-button color="orange" type="button" href="">Tinjau</ui-button>
+                  <ui-button variant="outline_orange" type="button" href="lowongan/kurasi">Detail</ui-button>
+                  <ui-button color="orange" type="button" href="lowongan/review">Tinjau</ui-button>
                 </div>
               </div>
             </div>

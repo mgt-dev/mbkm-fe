@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base href="/" />
+    <base href="https://mgt-dev.github.io/mbkm-fe/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Beranda page" />
+    <meta name="description" content="" />
     <title>Lowongan</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="src/css/style.css" />
     <script src="src/js/guard-auth.js" type="module"></script>
     <script src="src/js/bundle-auth.js" type="module" defer blocking="render" fetchpriority="high"></script>
-    <script src="new_post/script.js" type="module" defer></script>
+    <script src="lowongan/create/script.js" type="module" defer></script>
   </head>
 
   <body>
@@ -38,31 +38,30 @@
           </div>
           <div>
             <fo-label for="description" label="Deskripsi Pekerjaan"></fo-label>
-            <fo-textarea
-              className="min-h-150"
-              name="textArea"
-              placeholder="Silahkan isi disini"
-              value="."
-        ></fo-textarea>
-        <div>
-          <fo-label for="duration" label="Durasi"></fo-label>
-          <fo-input name="duration" value="" placeholder="3 bulan"></fo-input>
-          <fo-error name="duration"></fo-error>
-        </div>
-        <div>
-          <fo-label for="work_type" label="Jenis Pekerjaan"></fo-label>
-          <fo-input name="work_type" value="" placeholder="fulltime"></fo-input>
-          <fo-error name="work_type"></fo-error>
-        </div>
-        <div>
-          <div class="flex justify-between">
-            <fo-label for="benefit" label="Benefit Yang Ditawarkan"></fo-label>
-            <ui-button type="button" variant="ghost">+ Tambah Benefit</ui-button>
+            <fo-textarea className="min-h-150" name="textArea" placeholder="Silahkan isi disini" value="."></fo-textarea>
           </div>
-          <fo-input name="benefit" value="" placeholder="Gaji Pokok Per Bulan Rp 3.000.000"></fo-input>
-          <fo-input name="benefit" value="" placeholder="Tunjangan Kesehatan"></fo-input>
-          <fo-input name="benefit" value="" placeholder="Transportasi"></fo-input>
-          <fo-error name="benefit"></fo-error>
+          <div>
+            <fo-label for="duration" label="Durasi"></fo-label>
+            <fo-input name="duration" value="" placeholder="3 bulan"></fo-input>
+            <fo-error name="duration"></fo-error>
+          </div>
+          <div>
+            <fo-label for="work_type" label="Jenis Pekerjaan"></fo-label>
+            <fo-input name="work_type" value="" placeholder="fulltime"></fo-input>
+            <fo-error name="work_type"></fo-error>
+          </div>
+          <div>
+            <div class="flex justify-between items-center">
+              <fo-label for="benefit" label="Benefit Yang Ditawarkan"></fo-label>
+              <ui-button id="add-benefit" type="button" variant="ghost">+ Tambah Benefit</ui-button>
+            </div>
+            <div id="benefit-container" class="flex flex-col gap-4">
+              <fo-input name="benefit" value="" placeholder="Gaji Pokok Per Bulan Rp 3.000.000"></fo-input>
+              <fo-input name="benefit" value="" placeholder="Tunjangan Kesehatan"></fo-input>
+              <fo-input name="benefit" value="" placeholder="Transportasi"></fo-input>
+              <fo-error name="benefit"></fo-error>
+            </div>
+          </div>
           <div>
             <fo-label for="status" label="Status"></fo-label>
             <fo-input name="status" value="" placeholder="tersedia"></fo-input>
@@ -78,7 +77,7 @@
             <fo-input name="deadline" value="" placeholder="6 September 2024"></fo-input>
             <fo-error name="deadline"></fo-error>
           </div>
-        </div>
+          <div class="mt-2 flex justify-end"><ui-button variant="default">Submit Lowongan</ui-button></div>
         </div>
         `
       </div>
