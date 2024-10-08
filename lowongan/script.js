@@ -81,7 +81,7 @@ const fetchListLowongan = async () => {
                 </div>
                 <div class="flex gap-2">
                   <ui-button variant="outline_orange" type="button" href="lowongan/kurasi">Detail</ui-button>
-                  <ui-button color="orange" type="button" href="lowongan/review">Tinjau</ui-button>
+                  <ui-button color="orange" type="button" href="lowongan/kurasi">Tinjau</ui-button>
                 </div>
               </div>
             </div>

@@ -92,7 +92,7 @@ class UIPagination extends HTMLElement {
     render(
       this,
       html`
-        <div class=${cn("pagination-wrapper mx-0 flex items-center justify-between gap-2 text-sm text-muted-foreground", this.getAttribute("className"))}>
+        <div class=${cn("pagination-wrapper mx-0 flex items-center justify-between gap-2 text-xs text-muted-foreground", this.getAttribute("className"))}>
           <div class="truncate">Total: <strong>${toMonetary(count)}</strong> items</div>
           <div class="flex items-center gap-4">
             <div class="flex gap-4">
