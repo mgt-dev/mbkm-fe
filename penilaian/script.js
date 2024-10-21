@@ -59,7 +59,9 @@ const fetchTabelPenilaian = async () => {
                 : ""}
             </td>
             <td class="flex space-x-4">
-              <div><iconify-icon icon="solar:eye-bold" class="text-orange-500" height="16"></iconify-icon></div>
+              <div>
+                <a href="/penilaian/penilaianKandidat"><iconify-icon icon="solar:eye-bold" class="text-orange-500" height="16"></iconify-icon></a>
+              </div>
             </td>
           </tr>
         `;

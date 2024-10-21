@@ -60,6 +60,7 @@ class UIButton extends HTMLElement {
                 variant === "default",
               "border border-orange-600/60 hover:border-orange-400 focus-visible:ring-orange-400 bg-white text-orange-600 hover:text-orange-800":
                 variant === "outline_orange",
+              "border border-red-600/60 hover:border-red-400 focus-visible:ring-red-400 bg-white text-red-600 hover:text-red-800": variant === "outline_red",
               "border border-blue-800/60 hover:border-blue-800 focus-visible:ring-blue-800 bg-white text-blue-800 hover:text-blue-800":
                 variant === "outline_blue",
               "text-blue-600 hover:text-blue-800 focus-visible:ring-white/20": variant === "ghost",

@@ -58,7 +58,9 @@ const fetchTabelLaporan = async () => {
                 : ""}
             </td>
             <td class="flex space-x-4">
-              <div><iconify-icon icon="solar:eye-bold" class="text-orange-500" height="16"></iconify-icon></div>
+              <div>
+                <ui-link href="laporan/laporanMagang"><iconify-icon icon="solar:eye-bold" class="text-orange-500" height="16"></iconify-icon></ui-link>
+              </div>
             </td>
           </tr>
         `;
