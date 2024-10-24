@@ -72,7 +72,7 @@ class UIButton extends HTMLElement {
               "border-green-600/60 hover:border-green-400 focus-visible:ring-green-500 bg-green-600 hover:bg-green-700": color === "green",
               "border-yellow-500/60 hover:border-yellow-400 focus-visible:ring-yellow-500 bg-yellow-500 hover:bg-yellow-600": color === "yellow",
               "border-gray-600/60 hover:border-gray-400 focus-visible:ring-gray-500 bg-gray-600 hover:bg-gray-700": color === "gray",
-              "border-muted/60 hover:border-muted/40 focus-visible:ring-muted/50 bg-muted text-muted-foreground hover:text-muted-foreground/80":
+              "border-muted/60 hover:border-muted/40 focus-visible:ring-muted/50 bg-gray-600/20 text-muted-foreground hover:text-muted-foreground/80":
                 color === "muted",
             },
             {

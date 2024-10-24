@@ -245,60 +245,58 @@
             </ui-dialog>
           </div>
           <div class="py-1 border-b border-dashed border-gray-300"></div>
-          <div class="p-4 text-md font-bold">Penilaian Kandidat</div>
-          <div class="px-4 flex flex-col gap-4">
-            <div class="flex gap-8 items-center">
-              <span class="w-32 text-xs font-bold">Nilai Akhir</span>
-              <div class="flex gap-0 text-xs font-bold text-white text-center">
-                <div class="px-4 py-2 bg-blue-900 rounded-l-md">C</div>
-                <div class="px-4 py-2 bg-red-600 rounded-r-md">Cukup</div>
-              </div>
+          <div class="p-4 text-md font-bold">Penilaian Kandidat Oleh Perusahaan</div>
+          <div class="px-4 flex gap-4">
+            <div class="w-full">
+              <fo-label for="nilai" label="Pilih Nilai"></fo-label>
+              <fo-select name="nilai">
+                <option value="100" selected>100</option>
+                <option value="90">90</option>
+                <option value="80">80</option>
+              </fo-select>
             </div>
-            <div class="flex gap-8 items-center">
-              <span class="w-32 text-xs font-bold">Perhitungan Nilai</span>
-              <div class="text-xs">100 + 70 + 10 /3 = 60</div>
+            <div class="w-full">
+              <fo-label for="nilaiA" label="Nilai"></fo-label>
+              <fo-input name="nilaiA" placeholder="A (Sangat Baik)" disabled></fo-input>
             </div>
-            <div class="mb-4 w-full flex flex-col border border-gray-300 rounded-md">
-              <div class="p-4 flex justify-between items-center bg-gray-200/50 font-bold border-b border-gray-300">
-                <div class="flex items-center font-semibold">
-                  <div class="w-60">Penilaian Dari Perusahaan</div>
-                  <div class="w-12">100</div>
-                  <div class="flex gap-0 text-xs font-bold text-white text-center">
-                    <div class="px-4 py-2 bg-blue-900 rounded-l-md">A</div>
-                    <div class="px-4 py-2 bg-red-600 rounded-r-md">Sangat Baik</div>
-                  </div>
+          </div>
+          <div class="px-4 py-4 w-full">
+            <fo-label for="textArea" label="Catatan Penilaian"></fo-label>
+            <fo-textarea class="min-h-24" name="textArea" placeholder="Silahkan Ketik Disini.." value=""></fo-textarea>
+          </div>
+          <div class="px-4 pb-4 flex justify-end">
+            <ui-button color="orange" className="w-max flex gap-2" data-dialog-trigger="penilaian-kandidat">
+              <iconify-icon icon="solar:medal-star-bold" height="22" class="text-white" noobserver></iconify-icon>
+              BERI NILAI</ui-button
+            >
+            <ui-dialog name="penilaian-kandidat" className="w-[750px] h-[215px]">
+              <div class="flex flex-col text-center justify-center items-center gap-4">
+                <div class="test-md font-bold">Yakin untuk Memberikan Nilai Untuk Kandidat Ini?</div>
+                <div class="text-sm font-semibold">Postingan Anda Akan Kami Tinjau Maksimal 2x24 Jam</div>
+                <div class="text-xs">
+                  <p>Akun Perusahaan Anda Kini Dapat Melakukan Posting Lowongan Magang Pada Website MBKM ULBI</p>
+                  <p>Silahkan Masuk Menggunakan Akun Yang Telah Anda Buat Untuk Melakukan Posting Lowongan Magang</p>
                 </div>
-                <div class="flex gap-4 text-xs">
-                  <div><span class="font-bold">Dinilai oleh: </span>Budi Santoso</div>
-                  <div><span class="font-bold">Dinilai pada tanggal: </span>31 Agustus 2024</div>
-                </div>
-              </div>
-              <div class="p-4 text-xs">
-                <p>
-                  Ahmad Yusran menunjukkan kinerja luar biasa selama masa magangnya. Ia cepat memahami proses keuangan dan software akuntansi yang digunakan,
-                  serta mampu menyelesaikan tugas-tugas dengan sangat teliti dan tepat waktu. Ahmad proaktif, memiliki inisiatif tinggi, dan selalu memberikan
-                  solusi yang efektif dalam berbagai situasi. Kemampuan komunikasinya baik, ia mudah beradaptasi dalam tim, dan selalu menunjukkan etos kerja
-                  yang positif. Ahmad sangat bertanggung jawab, disiplin, dan memiliki integritas yang tinggi. Kami sangat puas dengan kontribusinya dan
-                  merekomendasikannya untuk peran yang lebih menantang di masa depan.
-                </p>
-              </div>
-              <div class="p-4 flex items-center font-semibold border-t border-gray-300">
-                <div class="w-60">Penilaian Dari Dosen Wali</div>
-                <div class="w-12">70</div>
-                <div class="flex gap-0 text-xs font-bold text-white text-center">
-                  <div class="px-4 py-2 bg-blue-900 rounded-l-md">B</div>
-                  <div class="px-4 py-2 bg-red-600 rounded-r-md">Baik</div>
+                <div class="flex gap-3">
+                  <ui-button variant="outline_red" data-dialog-close>BATAL</ui-button>
+                  <ui-button color="green" data-dialog-trigger="penilaian-berhasil">YAKIN</ui-button>
                 </div>
               </div>
-              <div class="p-4 flex items-center font-semibold border-t border-gray-300">
-                <div class="w-60">Penilaian Dari Prodi</div>
-                <div class="w-12">10</div>
-                <div class="flex gap-0 text-xs font-bold text-white text-center">
-                  <div class="px-4 py-2 bg-blue-900 rounded-l-md">D</div>
-                  <div class="px-4 py-2 bg-red-600 rounded-r-md">Kurang</div>
+            </ui-dialog>
+            <ui-dialog name="penilaian-berhasil" className="w-[750px] h-[320px]">
+              <div class="flex flex-col text-center justify-center items-center gap-3">
+                <div class="test-md font-bold">Berhasil</div>
+                <iconify-icon icon="solar:verified-check-bold-duotone" height="96" class="text-green-600" noobserver></iconify-icon>
+                <div class="text-sm font-semibold">Postingan Anda Akan Kami Tinjau Maksimal 2x24 Jam</div>
+                <div class="text-xs">
+                  <p>Akun Perusahaan Anda Kini Dapat Melakukan Posting Lowongan Magang Pada Website MBKM ULBI</p>
+                  <p>Silahkan Masuk Menggunakan Akun Yang Telah Anda Buat Untuk Melakukan Posting Lowongan Magang</p>
+                </div>
+                <div class="flex gap-3">
+                  <ui-button data-dialog-close>SELESAI</ui-button>
                 </div>
               </div>
-            </div>
+            </ui-dialog>
           </div>
         </div>
       </div>
